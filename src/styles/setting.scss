@@ -1,0 +1,47 @@
+/*
+ * @Author: Wendy
+ * @Date: 2019-11-17 08:23:33
+ * @Last Modified by: Wendy
+ * @Last Modified time: 2019-11-17 08:23:33
+ * 封装全局css变量
+ */
+//-开始-全局封装样式变量
+$bg: #f5f5f5;
+$bg-red:#B60005;
+$bg-red-10:rgba(182,0,5,0.1);
+$bg-pink:#F15548;
+$bg-orange:#F68C26;
+$bg-yellow:#F7B425;
+$bg-blue:#3195FC;
+$bg-green:#2EA355;
+
+$font-gray:#4C4C4C;
+$font-gray1:#8E8D8C;
+$font-gray2:rgba(76,76,76,0.5);
+$font-icon:#BCC3D2;
+$font-red:#B60005;
+$font-orange:#F68C26;
+$font-blue:#4C9AE1;
+
+$font-size-56:56px;
+$font-size-34:34px;
+$font-size-30:30px;
+$font-size-28:28px;
+$font-size-26:26px;
+$font-size-24:24px;
+
+$avatar-bg:94px;
+$avatar-sm:80px;
+
+$border-color:#E1E1E1;
+
+$header-height-default: 105px;
+$header-height-ios: 120px;
+$header-height-android: 120px;
+$header-height-ios12: 135px;
+$header-height: 85px;
+
+$header-fontSize-ios: 28px;
+$header-fontSize-android: 32px;
+
+//-结束-全局封装样式变量

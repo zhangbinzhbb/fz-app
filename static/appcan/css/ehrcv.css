@@ -1,0 +1,467 @@
+
+@charset "utf-8";
+li, ol, ul {
+    list-style: none
+}
+a, a:hover {
+    text-decoration: none
+}
+a {
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+.KZ_elli, .ellipsis, .layer_box .con .item h3 a {
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+abbr, article, aside, blockquote, dd, div, dl, dt, figcaption, figure, footer, form, h1, h2, h3, h4, h5, header, input, li, mark, menu, meter, nav, ol, output, p, pre, progress, section, summary, textarea, time, ul {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline
+}
+.jobs ul, .mbox {
+    margin-top: 0.5em;
+}
+a, button, iframe, img {
+    border: 0
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+article, aside, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block
+}
+a {
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -ms-tap-highlight-color: rgba(0,0,0,0);
+    -o-tap-highlight-color: rgba(0,0,0,0)
+}
+em, i, s {
+    font-style: normal
+}
+.KZ_elli {
+    overflow: hidden
+}
+.KZ_center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+.KZ_fixed {
+    position: fixed;
+    top: 0
+}
+button, input[type=button], input[type=submit], input[type=text], select, textarea {
+    font-size: 1em;
+    -webkit-appearance: none;
+    outline: 0;
+    -o-appearance: none;
+    -ms-appearance: none
+}
+.clearfix:after, div:after, h3:after, ul:after {
+    content: ".";
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+    display: block;
+    overflow: hidden
+}
+::-webkit-input-placeholder {
+    color: #999
+}
+:-moz-placeholder {
+    color: #999
+}
+::-moz-placeholder {
+    color: #999
+}
+:-ms-input-placeholder {
+    color: #999
+}
+::selection {
+    background: #FFF;
+    color: #333
+}
+::-moz-selection {
+    background: #FFF;
+    color: #333
+}
+::-webkit-selection {
+    background: #FFF;
+    color: #333
+}
+a:hover {
+    cursor: pointer
+}
+.clearfix {
+    *zoom: 1;
+    display: block;+
+    zoom: 1
+}
+.clearfix {
+    height: 1%
+}
+.clear {
+    clear: both;
+    height: 0;
+    font: 0/0 Arial;
+    visibility: hidden;
+    overflow: hidden;
+    display: block
+}
+.home_header h1, .mbox h2, .search_item .jobs h2, h2, h3 {
+    font-weight: 400
+}
+.ellipsis {
+    overflow: hidden
+}
+.left {
+    float: left
+}
+.right {
+    float: right
+}
+.YH {
+    font-family: "Microsoft YaHei"
+}
+.ST {
+    font-family: SimSun
+}
+.YW {
+    font-family: Arial
+}
+.KZ_rel {
+    position: relative
+}
+.KZ_abs {
+    position: absolute
+}
+.KZ_dflex {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important
+}
+.KZ__dflex_column {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-flow: column
+}
+.KZ_flex {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+.KZ_center {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    vertical-align: middle
+}
+.i_add, .i_city, .i_email, .i_tel, .i_education, .i_flag, .i_info, .i_jobs, .i_monthly, .i_post, .i_url, .i_xiu, .i_xun, .i_year, .verified {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.2em;
+}
+.i_city {
+    background-image: url(images/ehrcv/i_city.png);
+    background-size: 0.8em 0.8em;
+    width: 0.8em;
+    height: 0.8em;
+}
+.i_tel {
+    background-image: url(images/ehrcv/i_tel.png);
+    background-size: 0.8em 0.8em;
+    width: 0.8em;
+    height: 0.8em
+}
+.i_email {
+    background-image: url(images/ehrcv/i_email.png);
+    background-size: 0.8em 0.8em;
+    width: 0.8em;
+    height: 0.8em
+}
+.i_year {
+    background-image: url(images/ehrcv/i_year.png);
+    background-size: contain;
+    width: 0.8em;
+    height: 0.8em
+}
+.i_eduexp, .i_tico1, .i_workexp {
+    width: 1.5em;
+    height: 1.5em;
+}
+.i_workexp {
+    background-image: url(images/ehrcv/i_workexp.png);
+    background-size: cover
+}
+.i_eduexp {
+    background-image: url(images/ehrcv/i_eduexp.png);
+    background-size: cover
+}
+.i_tico1 {
+    background-image: url(images/ehrcv/i_tico1.png) ;
+    background-size: 1.5em
+}
+.main {
+    padding: 0 0.5em;
+    overflow: hidden
+}
+.mbox {
+    position: relative;
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 0.5em;
+    display: block
+}
+.mbox h2 {
+    line-height: 1.25em;
+    color: #53cac3;
+    font-size: 1em;
+}
+.jobs {
+    padding: 0.5em 0;
+}
+.jobs .i_jobs {
+    position: absolute;
+    top: 0.5em;
+}
+.jobs ul li {
+    height: 1.25em;
+    line-height: 1.25em;
+    margin-top: 0.1em;
+}
+.jobs ul li span {
+    float: left;
+    color: #797979;
+    font-size: 0.8em;
+    margin-right: 0.75em;
+}
+.jobs ul li span i {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.25em;
+}
+.jobs ul li .monthly {
+    color: #ff3200
+}
+.company_intr h2 {
+    padding: 0.75em 0 0 0.75em
+}
+.geek_item .cont, .geek_item .geek_info .info {
+    margin-top: 0.5em;
+}
+.geek_item .geek_info {
+    border-bottom: 1px dashed #d7d7d7;
+    padding: 0.75em 0
+}
+.geek_item .geek_info h2 {
+    color: #53cac3;
+    font-size: 1em;
+}
+.geek_item .cont li {
+    height: 1.25em;
+    line-height: 1.25em;
+    margin-top: 0.125em;
+}
+.geek_item .cont li span {
+    float: left;
+    color: #797979;
+    font-size: 0.8em;
+    margin-right: 0.75em;
+}
+.geek_item .cont li span i {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.25em;
+}
+.geek_item .geek_info .geek_pic {
+    position: relative;
+    width: 4em;
+    height: 4em;
+}
+.geek_item .geek_info .geek_pic img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%
+}
+.geek_item .jobs {
+    position: relative
+}
+.geek_item .jobs .status {
+    float: right;
+    font-size: 0.75em;
+    margin: 0
+}
+.mbox .hd {
+    position: relative;
+    height: 3em;
+    line-height: 3em;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 0 0.625em;
+}
+.mbox .hd i {
+    position: absolute;
+    right: 0.5em;
+    top: 0.4em;
+    display: inline-block
+}
+.experience .exp_info {
+    border-bottom: 1px dashed #d7d7d7;
+    padding: 0.75em 0
+}
+.experience .exp_info:last-child {
+    border: none
+}
+.experience .exp_info h3 {
+    line-height: 1.125em;
+    margin-bottom: 0.4em
+}
+.experience .exp_info h3 .companyname {
+    color: #53cac3;
+    font-size: 0.8em;
+    overflow: hidden;
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+.experience .exp_info h3 .companyname em {
+    color: #dadada;
+    margin: 0 0.4em
+}
+.experience .exp_info h3 .date {
+    width: 12em;
+    color: #797979;
+    font-size: 0.65em;
+    text-align: right;
+    word-break:break-all;
+    display: block
+}
+.experience .exp_info .jobcont, .experience .exp_info .tit {
+    color: #797979;
+    font-size: 0.8em
+}
+.experience .exp_info .jobcont {
+    line-height: 1.25em;
+    margin-top: 0.3em;
+}
+.tags_box {
+    padding: 0 0 2px;
+    overflow: hidden
+}
+.tags_box span {
+    float: left;
+    height: 1.8em;
+    line-height: 1.8em;
+    background: #fff;
+    border: 1px solid #53cac3;
+    border-radius: 0.2em;
+    color: #53cac3;
+    font-size: 0.8em;
+    padding: 0 0.4em;
+    margin: 0.6em 0.6em 0 0
+}
+.geek_item .geek_info h2 span {
+    color: #c3c3c3;
+    font-size: 0.8em;
+    margin-left: 0.4em;
+}
+.jobs .jlist .intr {
+    margin: 0
+}
+.v_line{
+    
+}
+.v_line li{
+    float: left;
+    height: 0.8em;
+    line-height: 0.8em;
+    color: #797979;
+    font-size: 1em;
+    border-right: 1px solid #d7d7d7;
+    margin: 0 0;
+    padding: 0.25em 0.4em;
+}
+.v_line li:last-child{
+    border: none
+}
+.jobs .jlist .intr li {
+    float: left;
+    height: 0.8em;
+    line-height: 0.8em;
+    color: #797979;
+    font-size: 1em;
+    border-right: 1px solid #d7d7d7;
+    margin: 0 0 0.125em;
+    padding: 0 0.4em;
+}
+.jobs .jlist .intr li:last-child {
+    border: none
+}
+.jobs .jlist .intr em {
+    color: #d7d7d7;
+    display: inline-block
+}
+.mbox h2.hd {
+    height: 2.25em;
+    font-size:1em;
+    line-height: 2.25em;
+    border-bottom: 1px dashed #d7d7d7
+}
+.mbox .cont {
+    padding: 0 0.65em
+}
+.mbox .conts {
+    margin-top: 0.65em
+}
+.geek_item {
+    padding: 0 0.75em
+}
+.geek_item .geek_info .info .conts span {
+    color: #797979;
+    font-size: 1em;
+    margin-right: 0.9em;
+    display: inline-block
+}
+.geek_item .geek_info .info .conts span i {
+    margin-top: -2px
+}
+.geek_item .geek_info .geek_pic i, .geek_item .geek_info .geek_pic i_girl {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10
+}
+.experience .exp_info h3 {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important
+}
+.experience .exp_info h3 .companyname a {
+    color: #53cac3
+}
+.exp_box{font-size: 0.8em;}

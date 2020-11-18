@@ -1,0 +1,194 @@
+/** 主键 */
+	private String pkId;
+
+	/** 今日是否到岗(1是；0否) */
+	private String isPost;
+
+	/** 办公地是否在苏州 */
+	private String isSuzhou;
+
+	/** 是否离开过苏州 */
+	private String inSuzhou;
+
+	/** （预计）到达苏州日期 */
+	private Date arriveDt;
+
+	/** 健康状态(0正常；1异常) */
+	private String situation;
+
+	/** 症状 */
+	private String symptom;
+
+	/** 采取措施 */
+	private String measures;
+
+	/** 家庭住址 */
+	private String address;
+
+	/** 所属街道 */
+	private String street;
+
+	/** 是否向社区报备(1是；0否) */
+	private String isReport;
+
+	/** 接触观察是否经社区确认 */
+	private String isComfirm;
+
+	/** 备注 */
+	private String remark;
+
+	/** 填报人 */
+	private String reportBy;
+
+	/** 所属公司 */
+	private String company;
+
+	/** 所属部门 */
+	private String department;
+
+	/** 填报日期 */
+	private Date reportDt;
+
+	/** 未知1 */
+	private String undefinded1;
+
+	/** 未知2 */
+	private String undefinded2;
+
+	/** 未知3 */
+	private String undefinded3;
+
+	/** 未知4 */
+	private Date undefinded4;
+
+	/** 未知5 */
+	private Date undefinded5;
+
+	/** 离开苏州时间和去往城市 */
+	private String leaveCity;
+
+	/** 是否湖北来苏州 */
+	private String check1;
+
+	/** 是否途径湖北来苏州 */
+	private String check2;
+
+	/** 是否在近两周内往返过温州 */
+	private String check3;
+
+	/** 是否在近两周内往返过台州 */
+	private String check4;
+
+	/** 是否从湖北及温州以外地区反苏 */
+	private String check5;
+
+	/** 是否与湖北温州等人员接触 */
+	private String check6;
+
+	/** 是否与疑似或确诊病例接触 */
+	private String check7;
+
+	/** 是否仍在湖北温州未反苏 */
+	private String check8;
+
+	/** null */
+	private String check9;
+
+	/** null */
+	private String check10;
+
+	/** null */
+	private String check11;
+
+	/** null */
+	private String check12;
+
+	/** null */
+	private String check13;
+
+	/** null */
+	private String check14;
+
+	/** null */
+	private String check15;
+
+	/** null */
+	private String check16;
+
+	/** null */
+	private String check17;
+
+	/** null */
+	private String check18;
+
+	/** null */
+	private String check19;
+
+	/** null */
+	private String check20;
+
+	/** null */
+	private String content1;
+
+	/** null */
+	private String content2;
+
+	/** null */
+	private String content3;
+
+	/** null */
+	private String content4;
+
+	/** null */
+	private String content5;
+
+	/** null */
+	private String content6;
+
+	/** null */
+	private String content7;
+
+	/** null */
+	private String content8;
+
+	/** null */
+	private String content9;
+
+	/** null */
+	private String content10;
+
+	/** null */
+	private String content11;
+
+	/** null */
+	private String content12;
+
+	/** null */
+	private String content13;
+
+	/** null */
+	private String content14;
+
+	/** null */
+	private String content15;
+
+	/** null */
+	private String content16;
+
+	/** null */
+	private String content17;
+
+	/** null */
+	private String content18;
+
+	/** null */
+	private String content19;
+
+	/** null */
+	private String content20;
+
+	//所属公司名称
+	private String companyName;
+
+	//所属部门名称
+	private String deptName;

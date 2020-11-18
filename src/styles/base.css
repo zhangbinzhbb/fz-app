@@ -1,0 +1,503 @@
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.element::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+input[type='date'] {
+  background-color: transparent;
+  color: #fff;
+  filter: alpha(opacity=0);
+  /*androd*/
+  appearance: none;
+  /*下拉框去掉右侧图标*/
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+textarea,
+input {
+  border: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+.clear {
+  clear: both;
+  width: 100%;
+  height: 0;
+  font-size: 0px;
+  overflow: hidden;
+}
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.iPhone5 {
+  padding-top: 33px;
+}
+
+.iPhone6 {
+  padding-top: 45px;
+}
+
+.iPhonep {
+  padding-top: 50px;
+}
+
+.iPhonex {
+  padding-top: 76px;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+body,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+li,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button,
+div,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+a,
+button,
+div,
+img,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input::placeholder {
+  color: rgba(190, 188, 188, 1);
+}
+
+.van-cell__title > span {
+  font-size: 28px;
+}
+
+.van-cell > i {
+  font-size: 30px;
+}
+
+/* vant feild样式调整 */
+.yh-vant-form .van-field .van-cell__title {
+  width: 160px !important;
+  max-width: 160px !important;
+  display: inline-block;
+  color: #9E9E9D;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.yh-vant-form .van-field {
+  height: 100px;
+  line-height: 100px;
+  border-bottom: 2px solid #F0F0F0 !important;
+  position: relative;
+  padding: 0 36px;
+}
+.van-cell-group{
+  background-color: #F8F8F8 !important;
+}
+.yh-vant-form .input-cover-con{
+  background-color: #fff;
+}
+.yh-vant-form .input-cover-con:nth-last-of-type(1) .van-field{
+  border-bottom: 0;
+}
+
+.yh-vant-form .van-field__control {
+  font-size: 28px;
+  padding-left: 20px;
+  height: 100px;
+  line-height: normal;
+  position: relative;
+  text-align: right;
+  /* top: 19px; */
+}
+
+.yh-vant-form .van-cell__right-icon {
+  /* margin-top: 30px; */
+  line-height: 100px;
+  height: 100px;
+}
+
+.yh-vant-form .no-height {
+  height: auto;
+  display: block;
+}
+.yh-vant-form .no-height .van-field__body{
+  margin-top: 0;
+}
+
+.yh-vant-form .no-height textarea {
+  /* line-height: 150%; */
+  line-height: 200%;
+  border: 2px solid #efefef;
+  text-align: left;
+  height: 150px !important;
+  margin-bottom: 20px;
+}
+
+/* vant datePicker样式 */
+.yh-datePicker .van-picker__toolbar,
+.yh-datePicker .picker-toolbar span,
+.yh-datePicker .picker-toolbar {
+  height: 90px;
+  line-height: 90px;
+}
+
+.yh-datePicker .van-picker__toolbar .van-picker__cancel {
+  font-size: 31px;
+  color: #959595;
+}
+
+.yh-datePicker .van-picker__toolbar .van-picker__cancel,
+.yh-datePicker .picker-toolbar .mint-datetime-cancel {
+  font-size: 31px;
+  color: #959595;
+  padding-left: 30px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.yh-datePicker .van-picker__toolbar .van-picker__confirm,
+.yh-datePicker .picker-toolbar .mint-datetime-confirm {
+  font-size: 31px;
+  color: #b70007;
+  padding-right: 30px;
+  box-sizing: border-box;
+  text-align: right;
+}
+.yh-datePicker .van-picker-column,
+.yh-datePicker .picker-item {
+  font-size: 34px;
+}
+.yh-basic-form .van-popup--right {
+  width: 100%;
+  height: 100%;
+}
+
+.van-checkbox .van-checkbox__icon--checked i {
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 36px;
+  background: #b70007;
+  border: #b70007;
+  overflow: auto;
+}
+
+.van-checkbox .van-checkbox__icon .van-icon {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 25px;
+  top: 45px;
+  border-radius: 0;
+}
+
+.yh-search {
+  background: #F8F8F8;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.yh-search input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  display: block;
+  border: none;
+  text-align: left;
+  font-size: 26px;
+  background-color: #EFEFF0;
+  border-radius: 48px;
+  padding:14px 10px 14px 80px;
+  margin: 30px 0;
+}
+
+.yh-search {
+  position: relative;
+  background: #fff;
+}
+
+.yh-search input {
+  text-align: left;
+  line-height: normal!important;
+  border: none;
+  outline: none;
+}
+
+.yh-search .search-img {
+  width: 40px;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+.vant-del {
+  padding-left: 20px;
+  width: 25px;
+  position: relative;
+  top: 5px;
+}
+
+.file-link {
+  width: 94%;
+  margin: 0 auto;
+  font-size: 24px;
+  color: rgba(0, 138, 245, 1);
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  margin-top: 20px;
+  display: block;
+}
+
+.yh-vant-form .van-cell--required:before {
+  font-size: 40px;
+  left: 160px !important;
+  top: 10px;
+  color: #B60005
+}
+.yh-basic-form .required:before {
+  top: 36px;
+}
+.yh-btn-red {
+  width: 573px;
+  height: 91px;
+  background: rgba(183, 0, 7, 1);
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.yh-add-more {
+  font-size: 30px;
+}
+.yh-add-more img{
+  vertical-align: middle;
+}
+.yh-add-more .van-icon-delete{
+  font-size: 40px;
+}
+.yh-list .tar-lv2-son {
+  padding-bottom: 20px !important;
+}
+.yh-list .tar-lv2-son-title {
+  margin-left: 30px !important;
+}
+.yh-list .van-col span {
+  margin-left: 10px !important;
+}
+.yh-mb-16 {
+  margin-bottom: 16px;
+}
+.yh-mb-20 {
+  margin-bottom: 20px;
+}
+.border-dotted {
+  position: relative;
+}
+.border-dotted::after {
+  display: block;
+  content: '';
+  clear: both;
+  background: url('../assets/images/detail/bg.png') repeat-x center center;
+  height: 3px;
+  width: 100%;
+}
+
+.content-item {
+  padding: 25px 0 0 9px;
+}
+.content-item::after {
+  display: block;
+  content: '';
+  clear: both;
+  background: url('../assets/images/detail/bg.png') repeat-x center center;
+  height: 3px;
+  width: 100%;
+}
+
+.content-item:last-child::after {
+  display: none;
+  content: '';
+  clear: both;
+  background: url('../assets/images/detail/bg.png') repeat-x center center;
+  height: 3px;
+  width: 100%;
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.f22 {
+  font-size: 22px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.m_18 {
+  margin: 0 18px;
+}
+
+.m_16 {
+  margin: 0 16px;
+}
+
+.m_14 {
+  margin: 0 14px;
+}
+
+.m_12 {
+  margin: 0 12px;
+}
+
+.m_8 {
+  margin: 0 8px;
+}
+
+.pd25 {
+  padding-bottom: 25px;
+}
+
+.pl110 {
+  padding-left: 110px;
+}
+
+.m22 {
+  margin-bottom: 22px;
+}
+
+.m20 {
+  margin-bottom: 20px;
+}
+
+.m18 {
+  margin-bottom: 18px;
+}
+
+.color_b60005 {
+  color: #b60005;
+}
+
+.color_333 {
+  color: #333;
+}
+
+.lh74 {
+  line-height: 74px;
+  height: 74px;
+}
+
+.lh80 {
+  line-height: 80px;
+  height: 80px;
+}
+
+.fw {
+  font-weight: bold;
+}
+
+
+.color_000 {
+  color: #000;
+}
+
+.color_000_8 {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.color_000_6 {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.flex {
+  display: flex;
+}
+#signInfo .van-tabs--line .van-tabs__wrap {
+  height: 70px!important;
+}
+#signInfo .van-ellipsis {
+  line-height: 70px!important;
+}
+
+.money-red {
+  color: #b40005;
+  font-weight: bold;
+  padding-left: 4px;
+}
+
+.yh-cursor-blue-color {
+  color:rgba(74, 144, 226, 1) !important;
+}

@@ -1,0 +1,64 @@
+@mixin borderCreator($name, $direction, $type, $color) {
+  .border-#{$name} {
+    @if $direction !="" {
+      border-#{$direction}: 1px $type $color;
+    }
+
+    @else {
+      border: 1px $type $color;
+    }
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .border-#{$name} {
+      @if $direction !="" {
+        border-#{$direction}: 0.5px $type $color;
+      }
+
+      @else {
+        border: 0.5px $type $color;
+      }
+    }
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    .border-#{$name} {
+      @if $direction !="" {
+        border-#{$direction}: 0.333333px $type $color;
+      }
+
+      @else {
+        border: 0.333333px $type $color;
+      }
+    }
+  }
+}
+
+@mixin border-none(){
+  &::before{
+    display: none;
+  };
+  &::after{
+    display: none;
+  };
+}
+
+@mixin flex-fix() {
+  flex: 1;
+  flex-basis: 0.000000001px;
+  width: 1%;
+}
+
+@mixin touch-active($type:orange){
+  @if $type==orange {
+    &:active{
+      color: #fcc1a6;
+      background-color: rgba(250, 143, 84, .04);
+    }
+  } @else{
+    &:active{
+      color: #c6c6c6;
+      background-color: rgba(0, 0, 0, .04);
+    }
+  }
+}

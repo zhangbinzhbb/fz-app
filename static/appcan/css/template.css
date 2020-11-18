@@ -1,0 +1,317 @@
+.line-clamp1{
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.line-clamp2{
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.line-clamp3{
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+a:link {
+    text-decoration: none;
+}
+.ubb-1 {
+    border-bottom: 1px solid #ffffff;
+}
+.marg {
+    margin: .5em;
+}
+table.gridtable {
+    font-family: verdana, arial, sans-serif;
+    font-size: .8125em;
+    color: black;
+    border-width: 1px;
+    width: 100%;
+    border-color: #BABABA;
+    border-collapse: collapse;
+}
+table.gridtable td {
+    border-width: 1px;
+    padding: .7em;
+    border-style: solid;
+    border-color: #BABABA;
+}
+.imgIcon {
+    width: 100%;;
+    height: 100%;
+    background-size: contain;
+}
+.fileIcon {
+    width: 4em;;
+    height: 4em;
+    margin-right:.5em;
+    background-size: contain;
+}
+.fileIcon:active {
+    width: 4em;
+    height: 4em;
+    background-size: contain;
+    opacity: 0.5;
+    filter: "alpha(opacity=50)";
+}
+.fileName {
+    font-size: 1em;
+    width: 4em;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.imgEve {
+    width: auto;
+    min-height: 5em;
+    margin: 0 .5em .5em .5em;
+    border-radius: .25em;
+    background-color: #FFFFFF;
+    padding: 1em;
+}
+.fileEve {
+    width: auto;
+    /*min-height: 0.5em;*/
+    margin: 0 .5em .5em .5em;
+    border-radius: .25em;
+    background-color: #FFFFFF;
+}
+
+.noticeList {
+    /*font-size: .75em;*/
+    margin: .5em 0;
+}
+.notice_content_out {
+    width: auto;
+    padding: 1em .5em;
+    min-height: 5em;
+    margin: 0.5em;
+    background-color: #FFFFFF;
+    border-radius: .25em;
+}
+.notice_content_title {
+    font-size: 1.125em;
+}
+.notice_content_content {
+    word-break: break-all;
+    margin: .5em;
+    font-size: 1em;
+}
+.line {
+    padding: .5em;
+    height: 1.3em;
+    width: auto;
+    background-color: #FFFFFF;
+    border-radius: .25em;
+    margin: .5em .5em;
+}
+.line_record {
+    border-bottom: 1px solid #BABABA;
+    padding: .5em;
+    height: 1.3em;
+    width: auto;
+    background-color: #FFFFFF;
+    margin: 0 .5em;
+}
+.record_out {
+    margin: .5em;
+    border-radius: .25em;
+    background-color: #FFFFFF;
+}
+.line_left {
+    font-size: 1em;
+    float: left;
+    width: 40%;
+}
+.line_right {
+    font-size: 1em;
+    float: left;
+}
+.fa-size{font-size: 1em;}
+.num{margin: 0 0 0 .1em;}
+.color{color: #5F5F5F;}
+.top{margin-top: 0.5em;}
+
+/*EIP详情页面样式*/
+.taskLine {
+  background: #FDF1F1;
+  padding: 10px 0 13px 20px;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+}
+.left {
+  font-weight: 500;
+  color: rgba(158, 158, 157, 1);
+  font-size:14px;
+  display: flex;
+  align-items: center;
+  width: 170px;
+}
+.center {
+  /* max-width: 70%; */
+  text-align: left;
+  padding-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(76, 76, 76, 1) !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.right{width: 5em;max-width: 5em;min-width: 5em;color: #00A1EA;}
+.ub-file .center {
+  align-items: flex-end;
+}
+.head {
+  color:rgba(76, 76, 76, 1);
+  font-size:15px;
+  background-image: url('../../images/shenqing.png');
+  background-repeat: no-repeat;
+  background-size:11px 8.5px;
+  background-position:left center;
+  padding-left:20px;
+  font-weight:500;
+}
+.ubb {
+  border-bottom: 1px solid #F0F0F0;
+  background-color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.taskLine1{
+  padding: 20px !important;
+  background-color: #fff;
+}
+.flow-content{
+  background-color: #fff;
+  padding: 20px;
+}
+.flow-content ul li {
+  position: relative;
+}
+.flow-content .b-border:last-child::after {
+  background-image:none;
+}
+.flow-content .b-border::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 21px;
+  height: 66%;
+  width: 2px;
+  background-image: url('../../images/dottot.png');
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+
+.flow-content .flow-top{
+  display: flex;
+}
+.flow-content .content {
+  padding: 10px 0 16px 29px;
+  font-size:12px;
+  font-weight:500;
+  color:rgba(153, 153, 152, 1);
+}
+.flow-content ul li:last-child .content {
+  padding-bottom: 0;
+}
+
+.flow-content .flow-top img {
+  width:19px;
+  height: 19px;
+}
+.flow-content .flow-top .top-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  font-weight: 500;
+}
+.flow-content .flow-top .top-text .status {
+  font-size:14px;
+  color:rgba(76, 76, 76, 1);
+}
+.flow-content .flow-top .top-text .time {
+  font-size: 12px;
+  color:rgba(153, 153, 152, 1);
+}
+
+.flow-item{
+  border: none;
+}
+.marg-footer{
+  padding-bottom: 20px !important;
+
+}
+.footer-button-nav{
+  display: flex;
+  padding: 0 12px 20px;
+  background-color: #fff;
+}
+.footer-button-nav .button-item {
+  flex: 1;
+  background:rgba(182, 0, 5, 1);
+  border-radius:4px;
+  box-shadow:0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  font-size:14px;
+  font-weight:500;
+  color:rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 38px;
+  height: 38px;
+}
+.footer-button-nav .button-item+.button-item {
+  margin-left: 15px;
+}
+.taskLine-edit{
+  display: flex !important;
+  flex-direction: column;
+  padding-right: 20px;
+}
+.taskLine-edit .center {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: 10px;
+}
+.taskLine-edit .bc-border {
+  width: 100%;
+}
+.taskLine-edit .uinput textarea{
+  width: 100%;
+}
+.uinput input{
+  width: 186px !important;
+}
+/*.margT{margin-top: .5em;}*/
+/*EIP 信息资讯、消息,标题样式*/
+.title{font-size: 1.125em; font-weight: bold;}
+/*文本框清除图标*/
+.delquery {
+    background-position: 0 -320px;
+    cursor: pointer;
+    height: 2em;
+    margin: 4px 0px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2em;
+    text-align: center;
+}
+
+.fontCol {
+  color: rgba(158, 158, 157, 1);
+  font-weight: 500;
+  font-size: 14px;
+}

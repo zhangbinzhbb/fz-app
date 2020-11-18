@@ -1,0 +1,39 @@
+@import "../var/color.scss";
+
+//checker
+$checker-item-color:$color-grey;
+$checker-item-bdc:$color-light-black;
+$checker-item-bgc:$color-white;
+$checker-item-active-color:$color-red;
+$checker-item-active-bdc:$color-red;
+$checker-item-active-bgc:$color-light-grey-opacity-s;
+$checker-item-disabled-color:$color-light-grey-s;
+$checker-item-disabled-bdc:$color-light-grey-s;
+$checker-item-disabled-bgc:$color-light-grey-ss;
+
+// form
+$form-color:$color-grey;
+$form-bgc:$color-white;
+$form-invalid-color:#e64340;
+$form-group-legend-color:$color-light-grey;
+$form-group-legend-bgc:$color-background;
+$form-label-required-color:#B60005;
+
+// select
+$select-color :$color-grey;
+$select-bgc :$color-white;
+$select-disabled-color :#b8b8b8;
+$select-disabled-bgc :$color-light-grey-opacity;
+$select-border-color :$color-light-grey-s;
+$select-border-active-color :$color-orange;
+$select-icon-color :$color-light-grey;
+$select-placeholder-color :$color-light-grey-s;
+
+//textarea
+$textarea-color :$color-grey;
+$textarea-bgc :$color-white;
+$textarea-border-color :$color-row-line;
+$textarea-focus-border-color :$color-orange;
+$textarea-outline-color :$color-orange;
+$textarea-placeholder-color :$color-light-grey-s;
+$textarea-indicator-color :$color-light-grey-s;

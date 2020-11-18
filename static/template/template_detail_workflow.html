@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html
+  class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px"
+>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+  <link rel="stylesheet" href="../appcan/css/fonts/font-awesome.min.css" />
+  <link rel="stylesheet" href="../appcan/css/ui-box.css" />
+  <link rel="stylesheet" href="../appcan/css/ui-base.css" />
+  <link rel="stylesheet" href="../appcan/css/ui-color.css" />
+  <link rel="stylesheet" href="../appcan/css/template.css" />
+  <link rel="stylesheet" href="../appcan/css/appcan.icon.css" />
+  <link rel="stylesheet" href="../appcan/css/appcan.control.css" />
+  <link rel="stylesheet" href="HR_table/css/main.css" />
+
+  <style type="text/css">
+    .t-blu2 {
+      color: #0670b7;
+    }
+    .uba1 {
+      border: 2px solid;
+    }
+    .c-bla1 {
+      background-color: #484848;
+    }
+    .uwh-tBtn {
+      width: 28px;
+      height: 28px;
+    }
+    .tab_select {
+      background-color: #fff;
+      color: #00a1ea !important;
+    }
+    .uinn-a15 {
+      padding: 3px 0;
+    }
+    .margT {
+      /*margin: 3px;*/
+      background-color: #ffffff;
+    }
+    .tipCss {
+      padding: 8px 0;
+      text-align: center;
+      color: #ff0000;
+    }
+    .wordBreak {
+      word-break:break-all
+    }
+    .marginB{
+      height: 300px;
+      width: 100%;
+    }
+    .fixedHeaderTop{
+      position: fixed!important;
+      transform: none;
+      top: 0px;
+    }
+    .fixedHeader{
+      position: fixed!important;
+      transform: none;
+      top: 0px;
+    }
+    .fixfixed {
+      position: absolute!important;
+    }
+    /* 新增css */
+    .head{
+      padding-left:17px;
+    }
+    .taskLine-edit  .center{
+      /*margin-top: 57px;*/
+    }
+    .center{
+      flex-direction: unset;
+      max-width: 100%;
+      position: relative;
+    }
+    .center font{
+      color:#B60005!important;
+      padding-left: 5px;
+    }
+    .block, .margT {
+      margin:0 !important;
+      height: 100%;
+      padding-bottom: 9px;
+      background:#F8F8F8!important;
+    }
+    .checkbox{
+      height:100%;
+    }
+    .ub-f2{
+      height:auto;
+      word-wrap: break-word;
+      /*display: block!important;*/
+      text-align: left;
+      word-break: break-all;
+    }
+    .ub-ac{
+      /*display: flex!important;*/
+      /*height: 22px;*/
+    }
+    .ub-checkBox .ub-ac{
+      display: flex!important;
+      height: 22px;
+    }
+    .taskLine-edit{
+      height:auto!important;
+    }
+    .checkbox{
+      height: 16px;
+      width: 1.5em;
+    }
+    .center input{
+      border: 1px solid grey;
+      /* padding: 3px 0 3px 8px; */
+      padding: 6px;
+      padding-left: 10px;
+    }
+    .left{
+      display: block;
+      /*width: 13%;*/
+      /*min-width: 121px;*/
+    }
+    .checkbox input[type=checkbox]{
+      min-width:100px;
+    }
+    .checkbox input[type=checkbox]:before{
+      position: absolute;
+      top: 0;
+      background-color: rgb(212,212,212);
+      background: url("../images/process_no.png");
+      background-size:100% 100% ;
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      visibility: visible;
+      padding-left: 0px;
+      text-align: center;
+      content: ''!important;
+      border-radius: 50%;
+    }
+    .checkbox input[type=checkbox]:checked:before{
+      position: absolute;
+      top: 0;
+      background-color: #B60005;
+      background: url("../images/process_yes.png");
+      background-size:100% 100% ;
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      visibility: visible;
+      padding-left: 0px;
+      text-align: center;
+      content: ' '!important;
+      border-radius: 50%;
+    }
+    /* radiobox */
+    .radiobox input[type=radio]:before {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      background-color: rgb(212,212,212);
+      background: url("../images/process_no.png");
+      background-size:100% 100% ;
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      visibility: visible;
+      padding-left: 0px;
+      text-align: center;
+      content: ''!important;
+      border-radius: 50%;
+    }
+    .radiobox input[type=radio]:checked:before {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      background-color: #B60005;
+      background: url("../images/process_yes.png");
+      background-size:100% 100% ;
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      visibility: visible;
+      padding-left: 0px;
+      text-align: center;
+      content: ' '!important;
+      border-radius: 50%;
+    }
+    .content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0 2px 29px!important;
+    }
+    .content p:nth-of-type(1){
+      max-width: 80%;
+    }
+    .content_Result{
+      padding: 0px 0px 16px 29px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(153, 153, 152, 1);
+      line-height: 22px;
+      word-wrap: break-word;
+
+    }
+    .flow-content .b-border::after{
+      background-size: 100% 100%;
+      background-repeat: repeat-y;
+      height:80%;
+    }
+    /*附件*/
+    .ub-file{
+      display: block!important;
+    }
+    .ub-file .center{
+      display: block!important;
+      padding-top:20px;
+    }
+    .ub-file .center a{
+      display: block;
+      padding-left: 20px;
+      font-size:15px;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:500;
+      color:rgba(76,76,76,1);
+      margin-bottom: -7px;
+      /*line-height:40px;*/
+    }
+    .delquery{
+      margin-right: 13px;
+    }
+    /*#attributes_EXTERNAL_USER{*/
+    /*  margin-right: 5.8em;*/
+    /*}*/
+    i.fa-users::before{
+      color:#B60005!important;
+    }
+    .center .select{
+      margin-top:-7px;
+      margin-right:-7px;
+
+    }
+
+    .uinput input#per{
+      text-align: right;
+      padding-right:0;
+      border:none;
+    }
+    .right{
+      width: 2.2em;
+      max-width: 2.2em;
+      min-width: 2.2em;
+    }
+    .delquery{
+      position: absolute;
+      right: -41%;
+      top: 63%;
+      transform: translate(-50%,-50%);
+    }
+    .center label{
+      min-width: 74px;
+      display: flex!important;
+      justify-content: flex-end;
+    }
+    .center label:nth-of-type(3){
+      min-width: 102px;
+    }
+    .center label .selection{
+      padding-top: 3px;
+    }
+    .center_left,.tx-r{
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(153, 153, 152, 1) !important;
+    }
+    .bc-text a{
+      padding-right:1.2em;
+    }
+    .ub-lable{
+      flex-direction: column;
+    }
+    .ub-lable div:first-child{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .bc-text .ub-f1{
+      font-size: 14px;
+      color: rgba(76, 76, 76, 1);
+    }
+    #content{
+      height:auto;
+    }
+    .ub-checkBox .ub-ac{
+      min-height: 22px;
+      height: auto;
+    }
+    .tx-r{
+      min-width: 113px;
+      max-width: 113px;
+    }
+    .center .fileTips{
+      display: flex;
+      justify-content: flex-end;
+      text-align: left;
+    }
+    #header .fa {
+      margin-left: -22px!important;
+    }
+    /*  头部返回 图标*/
+    .fa-angle-left:before{
+      content:none;
+    }
+    .nav-btn .fa.fa-angle-left.fa-2x{
+      background-image: url("../images/back-new.png");
+      background-repeat:no-repeat;
+      width: 12px;
+      height: 21px;
+      background-size: 100% 100%;
+      margin-top: 3px;
+      margin-left: -16px;
+    }
+    #headerTop{
+      height: 51px!important;
+    }
+  </style>
+</head>
+<body class="um-vp " ontouchstart>
+<div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+  <!--header开始-->
+  <!--<div id="headerTop" class="uh bc-text-head ub bc-head" style="height: 32px; position: fixed; top: 0px; z-index: 10;"></div>-->
+  <div id="headerTop" class="uh bc-text-head ub bc-head fixedHeaderTop" style="height: 0px;  z-index: 10"></div>
+  <div id="header" class="uh bc-text-head ub bc-head fixedHeader" style="z-index: 11"></div>
+  <!--header结束--><!--content开始-->
+  <div id="content" class="ub-f1 tx-l" style="margin-top: 47px;">
+    <!--<div id="listview"></div>-->
+    <!-- <div class="ub ub-ac taskLine ubb taskLine-edit">
+      <div class="left ub-f1 ">实施组需求说明<span style="color:red;float:right;">*</span></div>
+      <div class="center ub-f2">
+        <div class="uba bc-border uinput ub ub-f1">
+          <textarea placeholder="" id="xqkxxsm" maxLength="500" type="text" class="ub-f1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="ub ub-ac taskLine ubb">
+      <div class="left ub-f1 ">预计工作量(人/天)<span style="color:red;float:right;">*</span></div>
+      <div class="center ub-f2">
+        <div class=" uinput ub ub-f1 bc-border uba">
+          <input type="text" id="gzlpg" class="ub-f1" maxlength="5" name="gzlpg" required="required" maxlength="8"
+           />
+        </div>
+      </div>
+    </div>
+    <div class="ub ub-ac taskLine ubb">
+      <div class="left ub-f1">预计上线时间<span style="color:red;float:right;">*</span></div>
+      <div class="center ub-f2">
+        <div class=" uinput ub ub-f1 bc-border uba">
+          <input type="date" id="sxsjyg" class="ub-f1" name="sxsjyg" required="required"
+            value="" />
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <input type="hidden" name="postUrl" id="postUrl" />
+  <!--<div class="" id="backHome">
+    <div class="" style="margin:4px 0 0 11px; width: 22px;height: 22px;background-size:contain;background-image: url('../css/images/top.png');"></div>
+    <div style="margin:0 0 0 14px;font-size: 12px;color: #5B5B5B;font:微软雅黑;">顶部123</div>
+  </div>-->
+  <!--content结束-->
+  <div id="footer" class="bc-border ub sc-bg"></div>
+</div>
+<script src="../appcan/js/pym.js"></script>
+<script src="../appcan/js/appcan.js"></script>
+<script src="../appcan/js/appcan.control.js"></script>
+<script src="../appcan/js/requesturl.js"></script>
+<script src="../appcan/js/jxhdControl.js"></script>
+<script src="../appcan/js/Base64.js"></script>
+<script src="../appcan/js/template-native.js"></script>
+<script src="../appcan/js/tempDB.js"></script>
+<script src="../appcan/js/template_common.js"></script>
+<script src="../appcan/js/selectUser_common.js"></script>
+<script src="../appcan/js/jquery-2.1.1.js"></script>
+<script src="../appcan/js/downFiles.js"></script>
+<script src="../appcan/js/selectDate_common.js"></script>
+</body>
+
+<script>
+  var templateParams, template_cmd, thisPageName
+  var fromPageType = '0'
+  var templateHeader, templateContent, templateFooter, uri
+
+  $(document).ready(function() {
+    localstorageVal(false);
+    templateParams = appcan.locStorage.val('templateParams')
+    template_cmd = appcan.locStorage.val('template_cmd')
+    thisPageName = appcan.locStorage.val('thisPageName')
+    //从数据库中查询header，content,footer的模板并赋值到header,content,footer参数中。
+    getDataByCmd(template_cmd, function(data) {
+      if (data == 1) {
+        //cmd不正确
+      } else if (data == 2) {
+        //没有结果
+      } else {
+        getApplications(data)
+      }
+    })
+    setHeader();
+    appcan.button('#nav-left', 'btn-act', back)
+
+
+  })
+
+  //获取url路径的拼接参数,并存到localStorage中,使用时直接调localstorageVal方法
+  //调用的时候url可传可不传
+  function localstorageVal(url) {
+    //用 decodeURI 无法转换后台url转码，换成unescape
+    url = url || unescape(location.search)
+    // https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu
+    //一般url的参数都是在？后面开始是参数
+    //因为 templateParams 中有？和&符号，所有不用用split处理，只能用substring,需要保证传过来的参数顺序不变
+    var paramsStr = url;
+    if (paramsStr === undefined) {
+      //表示传递过来的url中不包含参数
+      return false
+    } else {
+      var paramslen = paramsStr.indexOf("templateParams=");
+      if(paramslen >-1){
+        var cmdlen = paramsStr.indexOf("&template_cmd=")
+        var paramstr = paramsStr.substring(paramslen+16,cmdlen-1)
+        var cmdStr = paramsStr.substring(cmdlen+14,nodelen);
+        var nodelen = paramsStr.indexOf("&NodeShield=");
+        var taskTypelen = paramsStr.indexOf("&taskType=");
+
+        var nodeStr = paramsStr.substring(nodelen+12,taskTypelen)
+        var taskStr = paramsStr.substring(taskTypelen+10,paramsStr.length)
+
+        appcan.locStorage.val("templateParams", "&"+paramstr);
+        appcan.locStorage.val("template_cmd", cmdStr);
+        appcan.locStorage.val("thisPageName", cmdStr+"_detail");
+        appcan.locStorage.val("NodeShield", nodeStr);
+        appcan.locStorage.val("taskType", taskStr);
+        appcan.locStorage.val('windowCloseType', 'close')
+        //用于判断从流程中心公众号进入
+        appcan.locStorage.val('processCloseType', 'close');
+      }
+    }
+  }
+
+
+  function reload() {
+    location.reload(true)
+  }
+  function getApplications(data) {
+    // alert('app')
+    templateHeader = data['template_Header']
+    templateContent = data['template_Content']
+    templateFooter = data['template_Footer']
+    templateParams = encodeURI(templateParams)
+    uri = centerIP + data['url'] + '?cmd=' + template_cmd + appcan.locStorage.val('commonParams') + templateParams
+    var url = encodeURI(uri)
+    appcan.locStorage.val('getDataUrl', url)
+    var json = {}
+
+    // requestJson({
+    //     uri:url,
+    //     type:'POST',
+    //     isToast:true,
+    //     postData:json,
+    //     callback:function(status,data){
+    //         if(status!=0){
+    //             return;
+    //         }
+    //         initPage(data);
+    //     }
+    // });
+
+    var token =
+      appcan.locStorage.val('token') == null
+        ? 'eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJqaWF5eiIsImlhdCI6MTU1NzM4NjU5NTIyNX0.Sw8vvXde_4MsA9OC-yIzMzKflOMOn-auAexAX-vdsvw'
+        : appcan.locStorage.val('token')
+
+    appcan.request.ajax({
+      url: url,
+      type: 'POST',
+      data: json,
+      datatype: 'json',
+      timeout: 30000,
+      headers: {
+        token: token
+      },
+      success: function(data, status, requestCode, response, xhr) {
+        initPage(data)
+      },
+      error: function(xhr, erroType, error, msg) {
+        if (msg.indexOf('timed out') > -1) {
+          alert('获取数据超时，请稍后重试')
+        } else {
+          alert('获取数据失败，请稍后重试')
+        }
+        return
+      }
+    })
+  }
+  function initPage(data) {
+    if (templateHeader != '\u0000' && templateHeader != '' && templateHeader != null) {
+      renderTemplate(templateHeader, data, 'header', 1)
+    }
+    if (templateFooter != '\u0000' && templateFooter != '' && templateFooter != null) {
+      renderTemplate(templateFooter, data, 'footer', 1)
+    }
+    if (templateContent != '\u0000' && templateContent != '' && templateContent != null ) {
+      appcan.locStorage.val('templateContent', templateContent)
+      appcan.locStorage.val('dataContentData', data)
+
+      // renderTemplate(templateContent, data, 'content', 1)
+      var dataContentData = JSON.parse(
+        appcan.locStorage.val('dataContentData')
+      )
+      if (dataContentData != null) {
+        var postUrl = ''
+        if (dataContentData.dataContent.processPostUrl != 'undefined' && dataContentData.dataContent.processPostUrl != null && dataContentData.dataContent.processPostUrl != ''
+        ) {
+          postUrl = dataContentData.dataContent.processPostUrl
+        }
+        $('#postUrl').val(postUrl)
+        // renderTemplate(templateContent, dataContentData, 'listview', 1)
+        renderTemplate(templateContent, dataContentData, 'content', 1)
+        loadWorkflowButtonsNew(dataContentData)
+
+      }
+      appcan.select('.select', function(ele, value) {
+        console.log(value);
+        $('#' + ele.attr('id')).val(value);
+      })
+
+
+      /*$('input').bind('input propertychange', function(e) {
+        var value = e.delegateTarget.value
+        var id = e.delegateTarget.id
+        $('#' +id).val(value)
+      })
+      $('select').on('focus', function() {
+        const os = appcan.locStorage.val('os')
+        if(os === '2') {
+          $('#header').removeClass('fixedHeader');
+          $('#headerTop').removeClass('fixedHeaderTop');
+          $('#header').addClass('fixfixed');
+          $('#headerTop').addClass('fixfixed');
+        }
+      })
+      $('textarea').on('focus', function() {
+        const os = appcan.locStorage.val('os')
+        if(os === '2') {
+          $('#header').removeClass('fixedHeader');
+          $('#headerTop').removeClass('fixedHeaderTop');
+          $('#header').addClass('fixfixed');
+          $('#headerTop').addClass('fixfixed');
+        }
+
+        // const os = appcan.locStorage.val('os')
+        // if(os === '1') {
+
+        // }
+      })
+      $('input').on('focus', function() {
+        const os = appcan.locStorage.val('os')
+        if(os === '2') {
+          $('#header').removeClass('fixedHeader');
+          $('#headerTop').removeClass('fixedHeaderTop');
+          $('#header').addClass('fixfixed');
+          $('#headerTop').addClass('fixfixed');
+          }
+
+      })
+      $('input').on('blur', function() {
+        const os = appcan.locStorage.val('os')
+        if(os === '2') {
+          $('#header').addClass('fixedHeader');
+          $('#headerTop').addClass('fixedHeaderTop');
+          $('#header').removeClass('fixfixed');
+          $('#headerTop').removeClass('fixfixed');
+        }
+
+      })
+      $('textarea').on('blur', function() {
+        const os = appcan.locStorage.val('os')
+        if(os === '2') {
+          $('#header').addClass('fixedHeader');
+          $('#headerTop').addClass('fixedHeaderTop');
+          $('#header').removeClass('fixfixed');
+          $('#headerTop').removeClass('fixfixed');
+        }
+
+      })
+      $('select').on('blur', function() {
+        const os = appcan.locStorage.val('os')
+        if(os === '2') {
+          $('#header').addClass('fixedHeader');
+          $('#headerTop').addClass('fixedHeaderTop');
+          $('#header').removeClass('fixfixed');
+          $('#headerTop').removeClass('fixfixed');
+        }
+
+      })*/
+      setBackWindowTop()
+    } else {
+      alert('自动获取模板失败，请主动获取模板')
+    }
+  }
+
+  function removeUHIOS7() {
+    var ios_version = uexWidgetOne.platformVersion
+    ios_version = ios_version.substring(0, ios_version.indexOf('.'))
+    if (uexWidgetOne.platformName == 'iOS' && ios_version >= 11) {
+      $('body').removeClass('uh_ios7')
+    }
+  }
+</script>
+
+<script>
+  var TASKINSTANCE_ID = ''
+  var PROCESSINSTANCE_ID = ''
+  var jsonData = 'j'
+  var btnObj = ''
+  var PROCESS_KEY = ''
+  // alert("content.html1");
+
+  function loadWorkflowButtonsNew(data) {
+    var taskType = appcan.locStorage.val('taskType')
+    var NodeShield = appcan.locStorage.val('NodeShield')
+    TASKINSTANCE_ID = data.dataContent.TASKINSTANCE_ID
+    PROCESSINSTANCE_ID = data.dataContent.PROCESSINSTANCE_ID
+    PROCESS_KEY = data.dataContent.PROCESS_KEY
+    var formType = data.dataContent.formType
+
+    if (NodeShield == 1 || NodeShield == '1') {
+      var tipStr =
+        '<div class="margT tipCss" style="margin-top: 0.2em;">移动端暂不支持该节点操作，请在PC端操作</div>'
+      // $('#listview').prepend(tipStr)
+      $('#content').prepend(tipStr)
+      return
+    }
+    data = data.dataContent.buttonList
+    if (data && data != '' && taskType == 'pending' && data.length > 0) {
+      var remarks =
+        '<div class="margT marg-footer"><div class="ub taskLine">'
+        +' <div class="left ub-f1 head">审批意见</div><div class="center ub-f2"></div><div class="right ub-f1"></div></div>' +
+        '<div class="taskLine taskLine1">'
+        +'<div class="uinput bc-border uba"><textarea onfocus="textareaFocus()" onblur="textareaBlur()" id="taskProcessDesc" placeholder="请输入审批意见（退回必填）" maxlength="500" type="text" class="ub-f1"></textarea></div></div>'
+        +'<div class="footer-button-nav" id="footerBtn"></div>'
+        +'</div>'
+      // $('#listview').append(remarks)
+      $('#content').append(remarks);
+
+    }
+    if (formType == 'ehr' && taskType == 'pending') {
+      var remarks =
+        '<div class="margT marg-footer"><div class="ub taskLine">'
+        +' <div class="left ub-f1 head">审批意见</div><div class="center ub-f2"></div><div class="right ub-f1"></div></div>' +
+        '<div class="taskLine taskLine1">'
+        +'<div class="uinput bc-border uba"><textarea onfocus="textareaFocus()" onblur="textareaBlur()" id="taskProcessDesc" placeholder="请输入审批意见（退回必填）" maxlength="500" type="text" class="ub-f1"></textarea></div></div>'
+        +'<div class="footer-button-nav" id="footerBtn"></div>'
+        +'</div>'
+      $('#content').append(remarks);
+
+      //EHR表单加载审批按钮
+      var approveBtn = $(
+        // "<div class='btn-nav'><div class='button-item' id='btnAgree' onclick='ehrFormApprove(\"Y\")'>同意</div><div class='button-item' id='btnRejected' onclick='ehrFormApprove(\"N\")'>否决</div></div>"
+        "<div class='button-item' id='btnAgree'  onclick='ehrFormApprove(\"Y\")'>同意</div><div class='button-item' id='btnRejected'  onclick='ehrFormApprove(\"N\")'>否决</div>"
+      )
+      // $('#listview').append(approveBtn)
+      // $('#content').append(approveBtn)
+      $('#footerBtn').append(approveBtn)
+    } else {
+      $.each(data, function(index, json) {
+        var id = json.id
+        var name = json.name
+        var type = json.type
+
+        /*按钮显示的条件*/
+        var isShowJS = json.fixParam_BeforeShowJS
+        //  alert("isShowJS:"+isShowJS)
+        if (
+          (typeof isShowJS != 'undefined') &
+          (isShowJS != null) &
+          (isShowJS != '')
+        ) {
+          var isShow = eval(isShowJS + '(' + json + ')')
+          if (!isShow) {
+            return
+          }
+        }
+        if (taskType == 'pending') {
+          /* 定义按钮 */
+          var btn = $(
+            "<div class='button-item' id='" +
+            id +
+            "' >" +
+            name +
+            '</div>'
+          )
+          /* 给按钮绑定事件 */
+          btn.bind('click', function() {
+            if (window.confirm('确认进行' + name + '操作？')) {
+              /*
+                /*
+                 * 点击按钮
+                 */
+              /*定义命令执行前操作的方法*/
+              var beforeHandleJS = json.fixParam_BeforeHandleJS
+              /* 一个json格式，必有的参数：result,errorMsg,extendParam*/
+              var isHandle = ''
+              var extendParam = ''
+
+              jsonData = json
+              btnObj = this
+              if (
+                (typeof beforeHandleJS != 'undefined') &
+                (beforeHandleJS != null) &
+                (beforeHandleJS != '')
+              ) {
+                isHandle = eval(beforeHandleJS + '()')
+                var isHandleJSON = eval('(' + isHandle + ')')
+                if (!isHandleJSON.result) {
+                  alert(isHandleJSON.errorMsg)
+                  return
+                }
+                extendParam = isHandleJSON.extendParam
+              }
+              /*  获取流程中需要的表单参数*/
+              if (
+                typeof extendParam == 'undefined' ||
+                extendParam == null ||
+                extendParam == ''
+              ) {
+                extendParam = ''
+              }
+              doProcessTask(this, name, id, type, json, isHandle)
+            } else {
+            }
+
+          })
+
+          /* 添加按钮  并为按钮添加样式*/
+          // $('#listview').append(btn)
+          // $('#content').append(btn)
+          $('#footerBtn').append(btn)
+        }
+      })
+    }
+  }
+
+  /*运行命令  */
+  function doProcessTask(
+    obj,
+    name,
+    commandId,
+    commandType,
+    commandJsonObj,
+    extendParam
+  ) {
+    processTask(name, commandId, commandType, commandJsonObj, extendParam)
+  }
+
+  /*运行命令 */
+  function processTask(
+    name,
+    commandId,
+    commandType,
+    commandJsonObj,
+    extendParam
+  ) {
+    var dataFlow = {
+      instId: PROCESSINSTANCE_ID,
+      taskId: TASKINSTANCE_ID,
+      commandId: commandId,
+      commandType: commandType,
+      processDesc: encodeURIComponent($('#taskProcessDesc').val()),
+      formParam: extendParam,
+      url: $('#postUrl').val()
+    }
+    var taskProcessDescFlag = commandJsonObj.fixParam_taskProcessDescFlag
+    //处理意见是否必须输入的标记
+    var taskProcessDescMessage =
+      commandJsonObj.fixParam_taskProcessDescMessage
+    //处理意见是否必须输入的提示信息
+    if (taskProcessDescFlag == 'true' || taskProcessDescFlag == true) {
+      if (dataFlow.processDesc == '') {
+        if (taskProcessDescMessage == '') {
+          taskProcessDescMessage = '请填写处理意见！'
+        }
+        alert(taskProcessDescMessage)
+        onBtn()
+        return
+      }
+    }
+    if (PROCESS_KEY == 'ei_enteProjPayOa') {
+      var resultMy = saveDataMy()
+      if (resultMy != undefined && !resultMy) {
+        onBtn()
+        return
+      }
+    }
+    /*获取操作成功后的JS处理*/
+    var successHandleJS = commandJsonObj.fixParam_SuccessHandleJS
+    /*获取操作失败后的JS处理*/
+    var failHandleJS = commandJsonObj.fixParam_FailHandleJS
+    if (PROCESS_KEY == 'ei_fundProjPay' && commandType == 'submit') {
+      if (typeof saveData1 == 'function') {
+        saveData1(function() {
+          execProcessTask(dataFlow, successHandleJS, failHandleJS)
+        })
+        return
+      }
+    }
+    execProcessTask(dataFlow, successHandleJS, failHandleJS)
+  }
+
+  /*
+   *防止多次提交表单
+   */
+  var submitCount = 0
+  function execProcessTask(data, successHandleJS, failHandleJS) {
+    var postUrl = $('#postUrl').val()
+    // alert(postUrl);
+    submitCount++
+
+    if (submitCount == 1) {
+      var url = dealDataUrl('/EipWorflowAction/processTask.do', '')
+      offBtn()
+      // uexWindow.toast(1, 5, '处理中...', '');
+      requestJson({
+        uri: url,
+        type: 'POST',
+        isToast: true,
+        postData: data,
+        callback: function(status, data) {
+          onBtn()
+          if (status != 0) {
+            alert(data.msg)
+            return
+          }
+          //自定义成功后处理
+          if (
+            (typeof successHandleJS != 'undefined') &
+            (successHandleJS != null) &
+            (successHandleJS != '')
+          ) {
+            successHandle = eval(successHandleJS + '()')
+            eval('(' + successHandle + ')')
+          }
+          /*
+           * 关闭提交页面，刷新“我的待办”列表
+           */
+          //var thisPageName = appcan.locStorage.val('thisPageName');
+          if (appcan.locStorage.val('os') === '2') {
+            appcan.locStorage.val('windowCloseType', "");
+          }else {
+            if (!appcan.locStorage.val('processCloseType')){
+              opener.location.reload();
+            }
+          }
+          back()
+          // appcan.window.evaluateScript(thisPageName, 'back()');
+          // appcan.window.evaluateScript('myTask', 'turnToSearch()');
+          //appcan.window.evaluatePopoverScript('myTask', 'myTaskList_content',"removeTask('"+TASKINSTANCE_ID+"')");
+          //刷新我的待办计数
+          //appcan.window.evaluateScript('index', 'updateTaskCount()');
+        }
+      })
+    }
+  }
+
+  /*
+   *流程中修改表单回调函数
+   */
+  function submitFormAndExec() {
+    var result = '{"result":true}'
+    return result
+  }
+</script>
+<script>
+
+  /**
+   *EHR表单审批
+   */
+  function ehrFormApprove(result) {
+    var btnName = result == 'N' ? '否决' : '同意'
+    if (window.confirm('确认进行' + btnName + '操作？')) {
+      if (result == 'N' && $('#taskProcessDesc').val() == '') {
+        alert('请填写处理意见')
+        return
+      }
+      offBtn()
+      // uexWindow.toast(1, 5, '处理中...', '')
+      var url = dealDataUrl('/HRFormAction/ehrFormApprove.do', '')
+      var dataContentData = JSON.parse(appcan.locStorage.val("dataContentData"));
+      var data = {
+        Form_Kind: dataContentData.dataContent.Form_Kind,
+        FormNo: dataContentData.dataContent.FormNo,
+        Form_Approver_ID: dataContentData.dataContent.Form_Approver_ID,
+        ApproveValue: result,
+        ApproveContent: $('#taskProcessDesc').val(),
+        Approver: dataContentData.dataContent.Approver
+      }
+      submitCount++
+      if (submitCount == 1) {
+        requestJson({
+          uri: url,
+          type: 'POST',
+          isToast: true,
+          postData: data,
+          callback: function(status, data) {
+            onBtn()
+            if (status != 0) {
+              submitCount = 0
+              return
+            }
+            if (appcan.locStorage.val('os') === '2') {
+              appcan.locStorage.val('windowCloseType', "");
+            }else {
+              if (!appcan.locStorage.val('processCloseType')){
+                opener.location.reload();
+              }
+            }
+            back()
+          }
+        })
+      }
+    }
+
+  }
+
+  /**
+   *最后一个参数为需要跳转的页面
+   */
+
+  function turnToDetail(cmd, tempPageType, params, htmlPath) {
+    var name = cmd + '_detail'
+    appcan.locStorage.val('templateParams', params)
+    appcan.locStorage.val('template_cmd', cmd)
+    appcan.locStorage.val('fromPageName', thisPageName)
+    //必须有，调用父页面js需使用此页面名称
+    appcan.locStorage.val('thisPageName', name)
+    appcan.window.open(name, htmlPath, 0, 4)
+  }
+
+  /*
+   * 打开一个新的页面
+   * CMD 接口命令
+   *
+   * template 模板页面
+   */
+  function turnToUrl(cmd, template, params) {
+    appcan.locStorage.val('templateParams', params)
+    appcan.locStorage.val('template_cmd', cmd)
+    appcan.locStorage.val('fromPageName', thisPageName)
+    appcan.locStorage.val('fromPageType', fromPageType)
+    appcan.locStorage.val('popName', 'workflow_detail_content')
+    //appcan.window.open(cmd, template + '.html', 0, 4)
+    window.open(template + '.html');
+  }
+  function offBtn() {
+    // $('.button-item').removeClass('bc-btn')
+    $('.button-item').addClass('off-btn')
+  }
+  function onBtn() {
+    $('.button-item').removeClass('off-btn')
+    // $('.button-item').addClass('bc-btn')
+  }
+
+  function back () {
+    var windowCloseType = appcan.locStorage.val('windowCloseType');
+    var processCloseType = appcan.locStorage.val('processCloseType');
+    appcan.locStorage.val('windowCloseType', "");
+    appcan.locStorage.val('processCloseType', "");
+    if (windowCloseType || processCloseType) {
+      window.close();
+    }else {
+      // window.history.back()
+      // location.reload()
+      //window.location.href='/#/process'
+      window.location.href='/eipserver/eipApp.html#/process'
+    }
+  }
+  var sumHeight = 0;   //计算整体高度
+  function textareaFocus () {
+    // var os = appcan.locStorage.val('os')
+    // if(os === '2') {
+    $('#content').append('<div class="marginB"></div>')
+    var blocks = $(".block");
+
+
+    for (var i = 0; i < blocks.length; i++) {
+      (function () {
+        var blockHeight = $(blocks[i]).height();
+        sumHeight = blockHeight + sumHeight
+      })(i)
+    }
+    console.log('sumHeight:',sumHeight)
+    // window.scrollTo(100, document.body.scrollHeight + 1400);
+    window.scrollTo(0, sumHeight + 300);
+    // }
+
+    // $('#header').removeClass('fixedHeader');
+    // $('#headerTop').removeClass('fixedHeaderTop');
+    // $('#header').addClass('fixfixed');
+    // $('#headerTop').addClass('fixfixed');
+    $('#header').removeClass('fixedHeader');
+    $('#headerTop').removeClass('fixedHeaderTop');
+    $('#header').addClass('fixfixed');
+    $('#headerTop').addClass('fixfixed');
+  }
+
+
+  function textareaBlur () {
+    // var os = appcan.locStorage.val('os')
+    // if(os === '2') {
+    $('.marginB').remove()
+    window.scrollTo(0, sumHeight - 300);
+    sumHeight = 0;
+    $('#header').addClass('fixedHeader');
+    $('#headerTop').addClass('fixedHeaderTop');
+    $('#header').removeClass('fixfixed');
+    $('#headerTop').removeClass('fixfixed');
+    // }
+  }
+</script>
+</html>

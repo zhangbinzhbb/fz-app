@@ -1,0 +1,116 @@
+/*
+ * @Author: Wendy
+ * @Date: 2019-11-17 08:23:33
+ * @Last Modified by: Wendy
+ * @Last Modified time: 2019-11-17 08:23:33
+ * 封装全局css变量:按钮
+ */
+ @import './setting.scss';
+.btn-full{
+    width: 670px !important;
+    height: 76px !important;
+    line-height: 76px !important;
+    text-align: center !important;
+    font-size:$font-size-28 !important;
+    display: block !important;
+    border-radius: 4px !important;
+    margin: 40px !important;
+}
+.btn-red{
+    background: $bg-red !important;
+    color: white !important;
+}
+.btn-red-outline{
+    background: none;
+    color: $font-red;
+    border: 2px solid $bg-red;
+}
+.btn-half{
+    width: 320px;
+    height: 76px;
+    line-height: 76px;
+    text-align: center;
+    font-size:$font-size-28;
+    margin: 40px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 40px;
+    &:nth-child(2){
+        margin-left:15px;
+    }
+}
+
+.btn-half-203{
+    width: 203px;
+    height: 76px;
+    line-height: 76px;
+    text-align: center;
+    font-size:$font-size-28;
+    margin: 40px 0;
+    display: inline-block;
+}
+.btn-half-145{
+    width: 145px;
+    height: 76px;
+    line-height: 76px;
+    text-align: center;
+    font-size:$font-size-28;
+    margin: 40px 0;
+    display: inline-block;
+}
+.tab-checkbox{
+    line-height: 64px;
+    height: 64px;
+    border: 2px solid $border-color;
+    background: none;
+    color: #333333;
+    font-size: $font-size-26;
+    display: inline-block;
+    padding: 0 16px;
+}
+.tab-checkbox-select{
+    line-height: 64px;
+    font-size: $font-size-26;
+    display: inline-block;
+    height: 64px;
+    padding: 0 16px;
+    border: 2px solid $bg-red;
+    background: $bg-red-10;
+    color: $bg-red;
+
+}
+.tab-text{
+    color:$font-gray;
+    font-size: $font-size-26;
+}
+.tab-text-select{
+    color:$font-red;
+    font-size: $font-size-26;
+}
+// tab下划线选中
+.tabs-con-globle{
+    text-align: center;
+    span{
+        font-size:26px;
+        color: #4C4C4C;
+        position: relative;
+        padding: 30px;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    .active{
+        color: $font-red;
+        &::after{
+            content: '';
+            display: inline-block;
+            width: 44px;
+            height: 4px;
+            box-sizing: border-box;
+            background: $bg-red;
+            position: absolute;
+            top: 66px;
+            left: calc(50% - 22px);
+        }
+    }
+}
+//-结束-全局封装样式变量

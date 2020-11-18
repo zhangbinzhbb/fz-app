@@ -1,0 +1,25 @@
+ /** 主键 */
+    private String pkId;
+
+    /** 平台名称 */
+    private String platName;
+
+    /** 平台简称 */
+    private String platShortName;
+
+    /** 平台代码（对应码表266父键的code_name值） */
+    private String platCode;
+
+    /** 平台性质 */
+    private String platType;
+
+    /** 平台性质 */
+    private String operName;
+
+    /** 注册资本 */
+    private String registCapi;
+
+    /** 成立日期 */
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @JSONField(format="yyyy-MM-dd")
+    private Date stepDate;

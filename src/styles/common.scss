@@ -1,0 +1,279 @@
+@import './global.scss';
+@import './font/font.scss';
+html,
+body {
+  background: $bg;
+  color: #666;
+  font-family: '微软雅黑', 'Arial','DINBold','cursive';
+  //font-family: 'DINCondensed-Bold';
+
+}
+html,
+body,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input,
+textarea,
+button {
+  outline: none;
+  -webkit-appearance: none; /* 方法2 */
+}
+
+img {
+  max-width: 100%;
+}
+
+.mint-header {
+  font-size: 24px;
+  height: 80px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 6px;
+  border-radius: 100%;
+  // display: block;
+  // background: red;
+  &.swiper-pagination-bullet-active {
+    background: $bg-red;
+    width: 30px;
+    border-radius: 12px;
+  }
+}
+
+// .hom
+.mint-navbar {
+  // padding: 30px 0;
+  // height: 87px;
+  height: 60px;
+  .mint-tab-item {
+    padding: 0;
+    color: #000;
+    .mint-tab-item-label {
+      font-size: 26px;
+      line-height: 40px;
+      // line-height: 68px;
+    }
+    &.is-selected {
+      border: none;
+      color: #b70007;
+      position: relative;
+      .mint-tab-item-label p{
+        color: #b70007;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        // bottom: 2px;
+        left: 50%;
+        margin-left: -43px;
+        width: 86px;
+        border-bottom: 4px solid #b70007;
+      }
+    }
+  }
+}
+
+.mint-tabbar {
+  background: #fff;
+  height: 95px;
+  & > .mint-tab-item.is-selected {
+    background: transparent;
+    .mint-tab-item-label {
+      color: $bg-red;
+    }
+  }
+  .mint-tab-item-label {
+    font-size: 24px;
+  }
+  .mint-tab-item-icon {
+    // height: 48px;
+    // width: 48px;
+    width: 42px;
+    height: 39px;
+  }
+
+  .mint-tab-item:nth-child(3) {
+    margin-top: -40px;
+    .mint-tab-item-icon {
+      height: 70px;
+      width: 70px;
+      padding: 10px 10px 0px 10px;
+      background: #fff;
+      border-radius: 100%;
+    }
+  }
+
+  .router-link-exact-active,
+  .router-link-active,
+  a {
+    color: inherit;
+  }
+}
+.mail-search {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  .seachForm {
+    input {
+      width: 610px;
+      height: 60px;
+      display: block;
+      border: none;
+      text-align: center;
+      font-size: 26px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      margin: 15px auto 0 auto;
+      line-height: normal;
+      padding-top: 8px;
+      box-sizing: border-box;
+    }
+  }
+}
+.new-big-tab {
+  margin-top: -10 !important;
+  padding: 20px 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .item {
+    display: inline-block;
+    img {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    div {
+      color: #333;
+      font-size: 26px;
+      padding: 10px;
+      padding-bottom: 5px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+  .active {
+    div {
+      background: #f8f8f8;
+    }
+  }
+}
+.yh-small-btn {
+  height: 85px !important;
+  line-height: 85px !important;
+  font-size: 30px !important;
+}
+.date-search-box {
+  padding-top: 20px;
+  font-size: 32px;
+  text-align: center;
+  i {
+    padding: 5px;
+    position: relative;
+    top: 6px;
+  }
+}
+.van-tab--active {
+  color: #b60005!important;
+
+}
+.van-tab {
+  font-size: 28px!important;
+}
+.van-tabs__line{
+  width: 80px!important;
+}
+.van-hairline--top-bottom:after {
+  border-width: 0!important;
+}
+
+.yh-common-title{
+  font-size: 28px !important;
+  color: #4C4C4C !important;
+  font-weight: bold !important;
+}
+
+.fd-tit-right-tag-1{
+  color: #ed7d11;
+  background: rgba(248, 141, 38, .14);
+  padding: 5px 8px;
+}
+
+.fd-tit-right-tag {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(3, 170, 74, 1);
+  background: rgba(58, 204, 120, 0.23);
+  padding: 5px 8px;
+  &:first-child {
+    color: #3195fc;
+    background: rgba(49, 149, 252, .23);
+  }
+}
+
+.fd-yh-table {
+  width: 100%;
+
+  .header {
+    th {
+      font-size: 26px;
+      color: #469eec;
+      text-align: center;
+      background: #e6f4ff;
+      height: 55px;
+      line-height: 55px;
+      font-weight: normal;
+    }
+  }
+
+  td {
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    line-height: 45px;
+  }
+}
+
+//在需要禁止选中的文字所在位置加上以下css样式
+// .txt {
+//   -webkit-touch-callout: none;
+//   -webkit-user-select: none;
+//   -khtml-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }
+
+
+* {
+  -webkit-touch-callout: none; //系统默认菜单被禁用/
+  -webkit-user-select: none; //webkit浏览器/
+  -moz-user-select: none; //火狐/
+  -ms-user-select: none; //IE10/
+  user-select: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: auto;
+}

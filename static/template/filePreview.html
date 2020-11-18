@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../appcan/css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../appcan/css/ui-box.css">
+        <link rel="stylesheet" href="../appcan/css/ui-base.css">
+        <link rel="stylesheet" href="../appcan/css/ui-color.css">
+        <link rel="stylesheet" href="../appcan/css/template.css">
+        <link rel="stylesheet" href="../appcan/css/appcan.icon.css">
+        <link rel="stylesheet" href="../appcan/css/appcan.control.css">
+        <link rel="stylesheet" href="HR_table/css/main.css">
+
+        <script src="../appcan/js/appcan.js"></script>
+        <script src="../appcan/js/jquery-2.1.1.js"></script>
+        <script src="../appcan/js/template_common.js"></script>
+    </head>
+    <script>
+      $(document).ready(function () {
+
+        var filePreviewUrl = appcan.locStorage.val('filePreviewUrl');
+        document.getElementById('preview').src = filePreviewUrl;
+        //获取可见宽度
+        var headerHeight = $("#header").height();
+        var height=document.documentElement.clientHeight-headerHeight;//80为头部的div的大小可自己修改
+        if(height>=0) {
+          document.getElementById('preview').style.height = height + 'px';
+        }
+        setHeader(false);
+      });
+      function back () {
+        window.close();
+        // window.history.back();
+      }
+    </script>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+          <div id="headerTop" class="uh bc-text-head ub bc-head" style="height: 0px; position: fixed; top: 0px; z-index: 10"></div>
+          <!--header开始-->
+          <div id="header" class="uh bc-text-head ub bc-head" style="position: fixed; z-index: 11; top: 0px;" >
+              <div class="nav-btn" id="nav-left">
+                <div class="fa fa-angle-left fa-2x" onclick="back()"></div>
+              </div>
+              <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">附件预览</h1>
+              <div class="nav-btn" id="nav-right">
+              </div>
+          </div>
+          <!--header结束-->
+          <!--content开始-->
+          <div id="content" class="ub-f1 tx-l" style="margin-top: 47px;">
+              <iframe id="preview" style="width: 100%; overflow-x : hidden" scrolling="no" ></iframe>
+          </div>
+          <!--content结束-->
+        </div>
+    </body>
+
+</html>

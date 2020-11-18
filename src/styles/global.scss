@@ -1,0 +1,504 @@
+@import './setting.scss';
+// $header-height-ios1: 105px;
+// $header-height-android1: 120px;
+
+// $header-height-ios 改成  $header-height-default
+$header-height-default: 115px;
+$header-height-ios: 130px;
+$header-height-android: 130px;
+$header-height-ios12: 159px;
+$header-height: 95px;
+
+$header-top-default:60px;
+$header-top-ios:50px;
+$header-top-android: 20px;
+$header-top-ios12:80px;
+
+$header-mySchedule-default:25px;
+$header-mySchedule-ios:25px;
+$header-mySchedule-android: 80px;
+$header-mySchedule-ios12:25px;
+$org-mySchedule-ios12:0px;
+$org-mySchedule-ios:0px;
+$tree-mySchedule-android: 20px;
+$folder-mySchedule-android: 0px;
+
+
+$header-folder-default:25px;
+$header-folder-ios:135px;
+$header-folder-android: 105px;
+$header-folder-ios12:155px;
+
+$header-org-ios12:30px;
+
+// 首页 顶部字体 安卓粗细
+$header-weight-ios12:700;
+$header-weight-andriod:normal;
+.yh-content {
+  padding-top: $header-height-default;
+  height: 100%;
+  box-sizing: border-box;
+}
+// 高级搜索 顶部距离
+.half .yh-right-content .filter-content-default{
+  padding-top:$header-top-default!important;
+}
+.half .yh-right-content .filter-content-ios{
+  padding-top:$header-top-ios!important;
+}
+.half .yh-right-content .filter-content-ios12{
+  padding-top:$header-top-ios12!important;
+}
+.half .yh-right-content .filter-content-android{
+  padding-top:$header-top-android!important;
+}
+// 日程 选人顶部距离
+.common-tree-select .tree-mySchedule-ios12{
+  padding-top:$header-mySchedule-ios12!important;
+}
+.common-tree-select .tree-page .sure-mySchedule-ios12{
+  padding-top:$header-mySchedule-ios12!important;
+}
+.sure-mySchedule-android{
+  padding-top:$header-mySchedule-android!important;
+}
+.folder-mySchedule-android{
+  padding-top:$folder-mySchedule-android!important;
+}
+.folder-mySchedule-ios{
+  padding-top:$folder-mySchedule-android!important;
+}
+.folder-mySchedule-ios12{
+  padding-top:$folder-mySchedule-android!important;
+}
+.common-tree-select .tree-mySchedule-android{
+  padding-top:$tree-mySchedule-android!important;
+}
+.common-tree-select .tree-mySchedule-ios{
+  padding-top:$header-mySchedule-ios!important;
+}
+.common-tree-select .tree-page .sure-mySchedule-ios{
+  padding-top:$header-mySchedule-ios!important;
+}
+.common-tree-select .org-mySchedule-ios12{
+  padding-top:$org-mySchedule-ios12!important;
+}
+.common-tree-select .org-mySchedule-ios{
+  padding-top:$org-mySchedule-ios!important;
+}
+// 选人 组织页面 最下方内容不显示
+// 第一层组织
+.org-chart-container1 .org-chart-node-children.fd-org-ios12:first-child{
+  padding-top:145px!important;
+}
+.org-chart-container1 .org-chart-node-children.fd-org-ios:first-child{
+  padding-top:125px!important;
+}
+.org-chart-container1 .org-chart-node-children.fd-org-android:first-child{
+  padding-top:85px!important;
+}
+// 第二层 选人
+.org-chart-container1 .org-chart-node-children.fd-org-child-ios12:first-child{
+  padding-top:145px!important;
+}
+.org-chart-container1 .org-chart-node-children.fd-org-child-ios:first-child{
+  padding-top:125px!important;
+}
+.org-chart-container1 .org-chart-node-children.fd-org-child-android:first-child{
+  padding-top:85px!important;
+}
+// 文件库顶部
+.fd-gray-bg>.fd-folder-item.fd-folder-ios12:nth-of-type(1){
+  padding-top:$header-folder-ios12!important;
+}
+.fd-gray-bg>.fd-folder-item.fd-folder-ios:nth-of-type(1){
+  padding-top:$header-folder-ios!important;
+}
+.fd-gray-bg>.fd-folder-item.fd-folder-android:nth-of-type(1){
+  padding-top:$header-folder-android!important;
+}
+// 选人 按组织
+.org-chart-container .org-chart-node-children.fd-org-ios12:nth-of-type(1){
+  padding-top:$header-org-ios12!important;
+}
+// 首页 顶部字体 安卓粗细
+.dashboard .board-list li.android-weight{
+  width: 22% !important;
+}
+.dashboard .board-list li.android-weight:first-child{
+  width: 33% !important;
+}
+.oa-ios12{
+  padding-top:160px!important;
+}
+.oa-ios{
+  padding-top:140px!important;
+}
+//.dashboard .board-list li .large.android-weight{
+//  font-weight:$header-weight-andriod!important;
+//}
+.yh-content .yh-page {
+  height: 100%;
+}
+
+.yh-content .yh-page > div {
+  height: 100%;
+}
+
+.yh-home-footer {
+  height: 60px;
+}
+// headerx.vue
+// 默认是 $header-height
+// 这个地方  $header-height-ios 改成 $header-height
+.yh-header-x {
+  height: $header-height-default;
+  font-size: $header-fontSize-android;
+
+  .header {
+    height: $header-height;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.more-mint-popup {
+  .more-content {
+    top: $header-height-ios;
+  }
+}
+
+.android-class {
+  // padding-top: $header-height !important;
+  padding-top: $header-height-android !important;
+
+  .yh-header-x {
+    // height: $header-height;
+    height: $header-height-android;
+    font-size: $header-fontSize-android;
+  }
+
+  .more-mint-popup {
+    .more-content {
+      // top: $header-height;
+      top: $header-height-android;
+    }
+  }
+}
+
+.android-class-defalut {
+  padding-top: $header-height !important;
+
+  .yh-header-x {
+    height: $header-height;
+    font-size: $header-fontSize-android;
+  }
+
+  .more-mint-popup {
+    .more-content {
+      top: $header-height;
+    }
+  }
+}
+
+.ios-class {
+  padding-top: $header-height-ios12 !important;
+
+  .yh-header-x {
+    height: $header-height-ios12;
+    font-size: $header-fontSize-ios;
+    font-family: '黑体';
+    font-weight: 500;
+  }
+
+  .more-mint-popup {
+    .more-content {
+      top: $header-height-ios12;
+    }
+  }
+}
+
+.ios-class-defalut {
+  padding-top: $header-height-android !important;
+
+  .yh-header-x {
+    height: $header-height-android;
+    font-size: $header-fontSize-ios;
+    font-family: '黑体';
+    font-weight: 500;
+  }
+
+  .more-mint-popup {
+    .more-content {
+      top: $header-height-android;
+    }
+  }
+}
+.has-comment {
+  box-sizing: border-box;
+  overflow: hidden;
+  .comment-content {
+    // height: calc(100% - 88px);
+    height: 100%;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+    // overflow: hidden;
+  }
+
+  .no-comment {
+    height: 100%;
+  }
+
+  .inputbottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px 20px 0 20px;
+    background: #fafafa;
+    width: 100%;
+    height: 88px;
+    padding-top: 16px;
+    box-sizing: border-box;
+
+    input {
+      width: 501px;
+      height: 57px;
+      float: left;
+      border: 2px solid rgba(232, 232, 232, 1);
+      padding-left: 20px;
+      font-size: 28px;
+      border-radius: 10px;
+      padding-top: 10px;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      /* 方法2 */
+      vertical-align: middle;
+      line-height: 57px;
+    }
+
+    .icon {
+      width: calc(100% - 531px);
+      height: 60px;
+      background: rgba(250, 250, 250, 1);
+      float: right;
+      font-size: 28px;
+      color: #b70007;
+      text-align: left;
+      padding-top: 15px;
+      box-sizing: border-box;
+    }
+  }
+}
+.van-field {
+  .van-cell__value {
+    .van-field__body {
+      // margin-top: 19px;
+    }
+  }
+}
+
+.van-pull-refresh {
+  .van-pull-refresh__head {
+    font-size: 28px;
+  }
+  .van-loading__text {
+    font-size: 28px;
+  }
+}
+
+.yh-file-item {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333;
+  font-size: 28px;
+  box-sizing: border-box;
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 2px solid #e8e8e8;
+  text-align: left;
+  background: white;
+
+  img {
+    width: 75px;
+    height: 75px;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+
+  .name {
+    display: inline-block;
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+table,
+table tr th,
+table tr td {
+  border: 1px solid #9ac5e9;
+}
+
+.yh-table {
+  width: 100%;
+
+  .header {
+    th {
+      font-size: 26px;
+      color: #469eec;
+      text-align: center;
+      background: #e6f4ff;
+      height: 55px;
+      line-height: 55px;
+      font-weight: normal;
+    }
+  }
+
+  td {
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    line-height: 45px;
+  }
+}
+
+.yh-datePicker {
+  .van-picker__columns {
+    position: relative;
+  }
+}
+.van-overlay {
+ background:rgba(0, 0, 0, 0.4);
+}
+.van-dialog {
+  color: #333;
+  border-radius: 0;
+  .van-dialog__header {
+    font-size: 30px;
+  }
+
+  .van-dialog__message {
+    font-size:34px;
+    font-weight:500;
+    color:rgba(51, 51, 51, 1);
+  }
+
+  .van-dialog__footer--buttons {
+    button {
+      height: 80px;
+      line-height: 80px;
+      font-size: 30px;
+    }
+  }
+
+  .van-dialog__confirm {
+    span {
+      color: #b70007;
+    }
+  }
+}
+
+.yh-new-list {
+  div {
+    .tar-lv2-son {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+
+      p {
+        // width: calc(100% - 40px);
+        width: 100%;
+        text-align: left;
+        font-size: 27px;
+        color: rgba(68, 68, 68, 1);
+        line-height: 38px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+
+      .pleaseimg {
+        margin-left: 20px;
+
+        .myMessage_img {
+          width: 36px;
+          height: 36px;
+          margin-top: 5px;
+        }
+      }
+
+      .van-col {
+        font-size: 24px;
+        text-align: left;
+        line-height: 47px;
+        color: #888888;
+      }
+
+      span {
+        font-size: 21px;
+        color: #888888;
+        // margin: 25px 22px 0px 35px;
+      }
+
+      i {
+        width: 10px;
+        height: 10px;
+        background: rgba(183, 0, 7, 1);
+        border-radius: 50%;
+        position: absolute;
+        top: 46px;
+        left: 18px;
+      }
+    }
+  }
+}
+.van-toast{
+  border-radius: 0;
+  background-color:rgba(0,0,0,0.7);
+  font-size: 28px;
+  font-family: PingFangSC-Medium,PingFang SC;
+  font-weight: 500;
+  color: rgba(255,255,255,1);
+  line-height: 40px;
+  padding:16px 37px;
+}
+.ios-basic-form {
+  input:disabled,
+  input[disabled],
+  input.disabled {
+    color: #444 !important;
+  }
+}
+.home-news {
+  .van-swipe__indicator--active {
+    background-color: #b70007 !important;
+  }
+  .van-swipe__indicators {
+    margin-left: -36px;
+    .van-swipe__indicator {
+      width: 9px !important;
+      height: 9px !important;
+    }
+  }
+}
+.filter-list{
+  position: relative;
+  z-index: 10;
+  .filter-content{
+    padding-top: 100px !important;
+  }
+}
+
+.refresh-box{
+  min-height: calc(100vh - 150px);
+}
+
+// minit-ui toast 组件影响的
+.mint-toast-text {
+  font-size: 28px !important;
+}

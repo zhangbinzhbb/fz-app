@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../appcan/css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../appcan/css/ui-box.css">
+        <link rel="stylesheet" href="../appcan/css/ui-base.css">
+        <link rel="stylesheet" href="../appcan/css/ui-color.css">
+        <link rel="stylesheet" href="../appcan/css/appcan.icon.css">
+        <link rel="stylesheet" href="../appcan/css/appcan.control.css">
+        <link rel="stylesheet" href="../appcan/css/list.css" />
+        <link rel="stylesheet" href="../appcan/css/template.css">
+        <link rel="stylesheet" href="../template/template_report_content/css/main.css">
+
+        <style type="text/css">
+          .b-gra {
+            border-color: #b7b7b7;
+          }
+          .t-gra1 {
+            color: #787878;
+          }
+          .umwh {
+            min-width: 0.6em;
+            min-height: 1em;
+          }
+          .btn_click:active {
+            opacity: 0.7;
+          }
+          .c-orange {
+            background-color: #c98d2e;
+          }
+          .c-green {
+            background-color: #5e9e25;
+          }
+          .c-red-oa {
+            background-color: #cf3a3a;
+          }
+          .uc-a-list1 {
+            -webkit-border-radius: 0.2em;
+            border-radius: 0.2em
+          }
+          .toEnsure_left {
+            margin-right: 1.5em;
+            margin-bottom: .5em;
+            background-image: url(../css/images/ake.png);
+            background-size: cover;
+            height: 1.5em;
+            width: 1.5em;
+          }
+          .toEnsure_left_tips {
+            font-size: .75em;
+            white-space: nowrap;
+            left: 2em;
+            top: .3em;
+          }
+          .hw_reply {
+            float: right;
+            color: #FFB400;
+            right: -.5em;
+            top: -.8em;
+          }
+          .hw_reply_only {
+            float: right;
+            color: #FFB400;
+            right: .5em;
+            top: -.8em;
+          }
+          .hw_file {
+            right: .2em;
+            background-image: url(../css/images/icon_file.png);
+            background-size: cover;
+            width: 1em;
+            height: 1em;
+            top: -.7em;
+          }
+          #listview{
+            margin-top: 114px!important;
+          }
+          #listview li .img{
+            width: 35px;
+            height: 35px;
+            margin-right: 12px;
+          }
+          #listview li .img img{
+            width: 100%;
+            border-radius: 50%;
+            height: 100%;
+          }
+          .checkbox input[type=checkbox]{
+            min-width:100px;
+          }
+
+          .checkbox input[type=checkbox]:before{
+            content: ''!important;
+            display: inline-block;
+            border: 1px solid #BCC3D2;
+            width: 24px;
+            height: 24px;
+            box-sizing: border-box;
+          }
+          .checkbox input[type=checkbox]:checked:before{
+            content: ''!important;
+            display: inline-block;
+            border: 1px solid #B60005;
+            width: 24px;
+            height: 24px;
+            background-image: url("../images/check.png");
+            background-size:100% 100%;
+          }
+        </style>
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <div id="headerTop" class="uh bc-text-head ub bc-head" style="height: 0px; position: fixed; top: 0px; z-index: 10"></div>
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head bc-head"  style="position: fixed; z-index: 11; top: 0px;">
+            </div>
+            <!--header结束--><!--content开始-->
+            <!--<div id="content" class="ub-f1 tx-l">
+            </div>-->
+            <!-- content.html内容开始 -->
+            <!-- content.html内容开始 -->
+            <div id="listview"  class=" bc-bg-w" style="margin-top: 82px;">
+
+            </div>
+            <!--<div class="backTop" id="backHome">
+              <div class="" style="margin:0.25em 0 0 0.7em; width:1.4em;height:1.4em;background-size:contain;background-image: url('../css/images/top.png');"></div>
+              <div style="margin:0 0 0 0.9em;font-size: 0.75em;color: #5B5B5B;font:微软雅黑;">顶部</div>
+            </div>-->
+            <!-- content.html内容结束 -->
+            <!--content结束-->
+            <div id="footer" class="bc-border ub sc-bg">
+            </div>
+        </div>
+        <script src="../appcan/js/appcan.js"></script>
+        <script src="../appcan/js/appcan.control.js"></script>
+        <script src="../appcan/js/requesturl.js"></script>
+        <script src="../appcan/js/jxhdControl.js"></script>
+        <script src="../appcan/js/Base64.js"></script>
+        <script src="../appcan/js/template-native.js"></script>
+        <script src="../appcan/js/tempDB.js"></script>
+        <script src="../appcan/js/template_common.js"></script>
+    </body>
+    <script>
+    var template_cmd = appcan.locStorage.val("template_cmd");
+    var fromPageName = appcan.locStorage.val('fromPageName');
+    var fromPageType = '0';
+    var conHeight = 0;
+    var thisPageName = appcan.locStorage.val('thisPageName');
+    var templateHeader,templateContent,templateFooter,uri;
+
+    /**
+     *原appcan中template_list_cntent.html页面定义内容--start
+     */
+    var curPage = 1;
+    var pageSize = 15;
+    var templateIsAppend = appcan.locStorage.val('templateIsAppend');
+    appcan.locStorage.remove('templateIsAppend');
+    var templateThisPageCmd = appcan.locStorage.val('templateThisPageCmd');
+    var fromPageName = appcan.locStorage.val('fromPageName');
+    var fromPageType = '1';
+    var thisPageName = appcan.locStorage.val('thisPageName');
+    var templateContent = appcan.locStorage.val("templateContent");
+    var getDataUrl = appcan.locStorage.val("getDataUrl");
+    var searchValue='{"searchId":""}';//查询条件
+    var tabIndex=0;
+    /**
+     * end
+     */
+
+    $(document).ready(function () {
+
+      initPageBefore(template_cmd);
+      setHeader(false);
+
+    });
+
+    /*function reload(){
+        window.reload();
+    }*/
+      function initPageBefore(cmd) {
+          getDataByCmd(cmd, function(data) {
+              if (data != 1 && data != 2) {
+                  initPage(cmd, data);
+              }
+          });
+
+      }
+
+      function initPage(cmd, data) {
+        var templateHeader = data["template_Header"];
+        var templateContent = data["template_Content"];
+        var templateFooter = data["template_Footer"];
+        if (templateHeader != "\u0000" && templateHeader != "" && templateHeader != null) {
+            renderTemplate(templateHeader,data,'header',1);
+            if($("#searchIdListTemp")!=null){
+                $("#searchIdListTemp").val(appcan.locStorage.val("searchValueListTemp"));
+            }
+        }
+        if (templateFooter != "\u0000" && templateFooter != "" && templateFooter != null) {
+            $("#"+"footer").html(templateFooter);
+        }
+        if (templateContent != "\u0000" && templateContent != "" && templateContent != null) {
+            //列表所需参数
+            appcan.locStorage.val("templateContent", templateContent);
+            appcan.locStorage.val('templateThisPageCmd', cmd);
+            appcan.locStorage.val("getDataUrl", dealDataUrl(data["url"], cmd));
+            // loadContent(cmd);
+
+            if (appcan.locStorage.val('params') != null && appcan.locStorage.val('params') != 'null' && appcan.locStorage.val('params') != undefined) {
+              var params = JSON.parse(appcan.locStorage.val('params'));
+              searchValue=appcan.locStorage.val('params');
+              appcan.locStorage.remove('params');
+            } else {
+              var params = {};
+            }
+            if (appcan.locStorage.val('templateParams') != null && appcan.locStorage.val('templateParams') != 'null' && appcan.locStorage.val('templateParams') != undefined) {
+              appcan.locStorage.remove('templateParams');
+            }
+            // initInfo(templateContent, dealDataUrl(data["url"], cmd), params);
+          initInfo(templateContent,  appcan.locStorage.val("getDataUrl"), params);
+
+
+        } else {
+            appcan.window.openToast('自动获取模板失败，请主动获取模板', 2000, '5', '0');
+        }
+        /*
+        * 页面加载完成后执行方法
+        */
+        try {
+            readyAfter();
+        } catch (e) {}
+    }
+
+      function initInfo(templateContent, uri, json) {
+        var url = uri + "&IS_PAGE=N" + "&curPage=" + curPage + "&pageSize=" + pageSize;
+        requestJson({
+          uri:url,
+          type:'POST',
+          isToast:true,
+          postData:json,
+          callback:function(status,data){
+            if(status!=0){
+              return;
+            }
+              renderTemplate(templateContent, data, 'listview', 1);
+          }
+        });
+      }
+
+     function dealDataUrl(url, cmd) {
+          var  templateParams =  appcan.locStorage.val("templateParams");
+          var uri='';
+          if(templateParams==null || templateParams=='null' || templateParams==undefined){
+              uri = centerIP + url + '?cmd=' + cmd + appcan.locStorage.val("commonParams");
+          }
+          else{
+              uri = centerIP + url + '?cmd=' + cmd + appcan.locStorage.val("commonParams")+templateParams;
+          }
+          return encodeURI(uri);
+      }
+
+      function loadContent(cmd) {
+          var html = 'template_list_content.html';
+          var name = cmd + '_content';
+          var titHeight = $('#header').offset().height;
+          if(conHeight==0){
+              conHeight = $('#content').offset().height;
+          }
+          var conWidth = $('#content').offset().width;
+          appcan.window.openPopover({
+              name : name,
+              dataType : 0,
+              url : html,
+              top : titHeight,
+              left : 0,
+              width : conWidth,
+              height : conHeight,
+              type : 0
+          });
+      }
+      function removeUHIOS7(){
+          var ios_version = uexWidgetOne.platformVersion;
+          ios_version = ios_version.substring(0,ios_version.indexOf("."));
+          if(uexWidgetOne.platformName == "iOS" && ios_version >=11){
+              $("body").removeClass("uh_ios7");
+          }
+      }
+
+      /*
+       * 新增方法
+       */
+      function turnToAdd(cmd) {
+          var name = thisPageName + '_add';
+          appcan.locStorage.val("template_cmd", cmd);
+          appcan.locStorage.val('fromPageName', thisPageName);
+          appcan.locStorage.val('fromPageType', fromPageType);
+          appcan.locStorage.val('thisPageName', name);
+          appcan.window.open(name, 'template_add.html', 0, 4);
+
+          return false;
+      }
+
+      function turnToSearch() {
+        var params = getValue();
+        appcan.locStorage.val("params",params);
+        searchValue = appcan.locStorage.val('params');
+        appcan.locStorage.remove('params');
+        curPage = 1;
+        listDataLoadByCurPage(curPage,0);
+      }
+
+      /*
+        * 加载列表type:0上拉、查询，1下拉
+        */
+      function listDataLoadByCurPage(curPage,type) {
+        var params = JSON.parse(searchValue);
+        var searchUrl = appcan.locStorage.val("getDataUrl");
+        var url = searchUrl + "&curPage=" + curPage + "&pageSize=" + pageSize;
+        var templateContentNew = appcan.locStorage.val("templateContent");
+        requestJson({
+          uri:url,
+          type:'POST',
+          isToast:true,
+          postData:params,
+          callback:function(status,data){
+            /*appcan.frame.resetBounce(type);*/
+            if(status!=0){
+              if(type==1){
+                curPage--;
+              }
+              return;
+            }
+            renderTemplate(templateContentNew, data, 'listview', (type==1 ? 0 : 1));
+          }
+        });
+      }
+
+      /*
+         * 打开一个新的页面
+         * CMD 接口命令
+         *
+         * template 模板页面
+         */
+      function turnToUrl(cmd, template, params) {
+        appcan.locStorage.val("templateParams",params);
+        appcan.locStorage.val("template_cmd", cmd);
+        appcan.locStorage.val('fromPageName', thisPageName);
+        appcan.locStorage.val('fromPageType', fromPageType);
+        appcan.locStorage.val('thisPageName', cmd);
+
+        appcan.window.open(cmd, template+".html", 0, 4);
+      }
+
+      function turnToDetail(cmd, tempPageType, params, htmlPath) {
+        var name = cmd + '_detail'
+        appcan.locStorage.val('templateParams', params)
+        appcan.locStorage.val('template_cmd', cmd)
+        appcan.locStorage.val('fromPageName', thisPageName)
+        //必须有，调用父页面js需使用此页面名称
+        appcan.locStorage.val('thisPageName', name)
+        //判断窗口关闭还是回退
+        appcan.locStorage.val('windowCloseType', "close")
+        appcan.window.open(name, htmlPath, 0, 4)
+      }
+
+      function back(){
+        window.close();
+      }
+
+    </script>
+
+</html>

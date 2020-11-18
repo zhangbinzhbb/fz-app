@@ -1,0 +1,99 @@
+var sumHeight = 0;   //计算整体高度
+function textareaFocus () {
+    $('#content').append('<div class="marginB"></div>')
+    var blocks = $(".block");
+
+    for (var i = 0; i < blocks.length; i++) {
+      (function () {
+        var blockHeight = $(blocks[i]).height();
+        sumHeight = blockHeight + sumHeight
+      })(i)
+    }
+    console.log(sumHeight)
+    window.scrollTo(0, sumHeight + 300);
+
+    $('#header').removeClass('fixedHeader');
+    $('#headerTop').removeClass('fixedHeaderTop');
+    $('#header').addClass('fixfixed');
+    $('#headerTop').addClass('fixfixed');
+}
+
+
+function textareaBlur () {
+  $('.marginB').remove()
+  window.scrollTo(0, sumHeight - 300);
+  sumHeight = 0;
+  $('#header').addClass('fixedHeader');
+  $('#headerTop').addClass('fixedHeaderTop');
+  $('#header').removeClass('fixfixed');
+  $('#headerTop').removeClass('fixfixed');
+}
+
+参考案例
+https://blog.csdn.net/ly2983068126/article/details/49306427
+https://blog.csdn.net/zhooson/article/details/75789659
+https://segmentfault.com/a/1190000016820155
+https://my.oschina.net/huqiji/blog/2993306
+
+
+1.方案一：
+
+header、footer ： position: fixed;
+
+main {
+    /* main绝对定位，进行内部滚动 */
+    position: absolute;
+    top: 50px;
+    bottom: 34px;
+    /* 使之可以滚动 */
+    overflow-y: scroll;
+    /* 增加该属性，可以增加弹性 */
+    -webkit-overflow-scrolling: touch;
+}
+
+main .content {
+    height: 2000px;
+}
+
+
+      <div ref="right" class = "right-content">
+        <!--首行固定-->
+        <div
+          ref="firstRowLayer"
+          class = "table-head"
+          data-_ref="firstRowLayer">
+          <table class= "full-table">
+            <thead>
+              <tr v-for = "header in tableHeader">
+                <th
+                  v-for = "(b,index) in header"
+                  v-if="index!=0 && index!=1"
+                  style="width:101px"
+                >
+                  <p>{{ b }}</p>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <!--正常表格内容(只有表格内容，没有表头和首列)-->
+        <div
+          ref="tableContainer"
+          class="table"
+          style="overflow:scroll"
+          @scroll="tableDivScroll($event)"
+        >
+          <table class="content-table">
+            <tbody ref="tbody">
+              <tr v-for="row in dataSheet">
+                <td
+                  v-for="(c,index) in row"
+                  v-if="index!=0 && index!=1"
+                >
+                  <p>{{ c }}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>

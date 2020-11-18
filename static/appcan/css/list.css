@@ -1,0 +1,465 @@
+.list {
+    font-family: 微软雅黑;
+    border-radius: .25em;
+    margin: .5em;
+    background-color: white;
+}
+.list_onclick:active {
+    background-color: #EBEBEB;
+}
+.list_header {
+    background-color: #F5F5F5;
+    height: 3em;
+    margin: .5em;
+    top: .5em;
+}
+.list_header_left {
+    float: left;
+    margin: .5em;
+    width: 2em;
+    height: 2em;
+    background-size: cover;
+}
+.list_header_right {
+    width: 12.5em;
+    float: left;
+}
+.list_header_right_title {
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.125em;
+    margin-top: .2em;
+}
+.list_header_right_time {
+    font-size: .875em;
+    color:#848484;
+    margin-top: .125em;
+}
+.list_content_bd {
+    height: 5.5em;
+    word-break: break-all;
+    font-size: .875em;
+    color:#848484;
+    padding: .5em;
+    margin: .5em .5em 0 .5em;
+    border-bottom: 1px solid #BABABA;
+}
+.list_content {
+    height: 5.5em;
+    word-break: break-all;
+    font-size: .875em;
+    padding: .5em;
+    margin: .5em .5em 0 .5em;
+}
+.list_footer {
+    height: 2em;
+    padding-top: .5em;
+    padding-left: .5em;
+    margin: 0 .5em 0 .5em;
+    font-size: .875em;
+}
+
+/**
+ *     通知
+ */
+.nt_file_div {
+    float: right;
+    width: 1.5em;
+    height: 100%;
+}
+.nt_file {
+    float: right;
+    margin: 1em .5em 0 0;
+    background-image: url(images/icon_file.png);
+    background-size: cover;
+    width: 1em;
+    height: 1em;
+}
+.nt_icon_01 {
+    background-image: url(images/notice/icon-notice-school.png);
+}
+.nt_icon_02 {
+    background-image: url(images/notice/icon-notice-class.png);
+}
+.nt_icon_03 {
+    background-image: url(images/notice/icon-notice-score.png);
+}
+ .nt_icon_04 {
+    background-image: url(images/notice/icon-notice-payment.png);
+}
+ .nt_icon_05 {
+    background-image: url(images/study/icon-notice.png);
+}
+
+/* 请假的列表css */
+.ap_list {
+    min-height: 5.73em;
+    /*font-family: 微软雅黑;*/
+    border-radius: .25em;
+    margin: .5em;
+    background-color: white;
+}
+.ap_list_onclick:active {
+    background-color: #EBEBEB;
+}
+.ap_list_header {
+    background-color: #F5F5F5;
+    min-height: 3em;
+    margin: .5em;
+    top: .5em;
+}
+.ap_list_header_left {
+    float: left;
+    margin: 0.2em 0.5em;
+    width: 2.5em;
+    height: 2.5em;
+    background-size: cover;
+}
+.ap_list_header_middle {
+    float: left;
+   height: 100%;
+}
+.ap_list_header_middle_title {
+    font-size: 1.125em;
+    color: #000000;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: .2em;
+}
+.ap_list_header_middle_time {
+    font-size: .875em;
+    margin-top: .1em;
+}
+.ap_list_header_right {
+    float: right;
+    margin-top: -0.5em;
+    background-size: cover;
+    width: 3.25em;
+    height: 2.3em;
+}
+.ap_gray{color:#848484;}
+.ap_list_content_bd {
+    word-break: break-all;
+    font-size: 1em;
+    padding: .5em;
+    /*height: 4.8em;*/
+    margin: .5em .5em 0 .5em;
+    border-bottom: 1px solid #BABABA;
+}
+.ap_list_content {
+    word-break: break-all;
+    font-size: 1em;
+    padding: .5em;
+    margin: .5em .5em 0 .5em;
+}
+.ap_list_footer {
+    height: 2em;
+    padding-top: .6em;
+    padding-left: .5em;
+    margin: 0 .5em 0 .5em;
+    font-size: .875em;
+}
+.list_footer_height{
+    /*height: 2.5em;*/
+    padding-top: .5em;
+    /*padding-left: .5em;*/
+    margin: 0.5em 0 0 0;
+    font-size: .875em;
+    border-top: 1px solid #BABABA;
+}
+.ap_cancle {
+    background-image: url('images/icon_approval_cancle.png');
+}
+.ap_submited {
+    background-image: url('images/icon_approval_submited.png')
+}
+.ap_allow {
+    background-image: url('images/icon_approval_allow.png')
+}
+.ap_notAllow {
+    background-image: url('images/icon_approval_notAllow.png')
+}
+.ap_sick {
+    background-image: url('images/icon_approval_sick.png')
+}
+.ap_thing {
+    background-image: url('images/icon_approval_thing.png')
+}
+.ap_other {
+    background-image: url('images/icon_approval_other.png')
+}
+
+/* 家庭作业 */
+.middleTime {
+    clear: both;
+    white-space: nowrap;
+    font-size: .875em;
+    text-align:center;
+    padding: 0 0.2em 0 .244em;
+    color: #FFFFFF;
+    background-color: #BABABA;
+    height: auto;
+    width: 7.5em;
+    margin: 2.5em auto 0 auto;
+}
+
+/*.hw_list{clear:both;height:4.5em; font-family:微软雅黑;border-radius:.25em; margin: 0.5em .5em .5em .5em;background-color: white;}
+ .hw_list_onclick:active{background-color: #EBEBEB;}
+ .hw_lm{float: left;}
+ .hw_list_left{float:left;height:3em;width:3em; margin: .5em .5em;}
+ .hw_list_left_icon{width:3em;height:3em;background-size: cover;}
+ .hw_list_right{float: right;height: 4.5em;width: 2.7em;}
+ .hw_list_middle{font-size:.75em;float:left;padding-right:.3em;height: 4.7em;margin: .67em 0 .67em 0;width: 16em;}
+ .hw_list_ensure{height: 2.5em;margin-top: .2em;}
+ .hw_list_file{height: 2em;}
+ .hw_list_right_submit_on{background-image:url(images/h_ensure1.png);background-size:cover;margin:0 auto 0 auto; height: 1.25em;width: 1.25em;}
+ .hw_list_right_name_on{margin: -.25em 0 0 .75em;font-size: .75em;}
+ .hw_list_right_submit_off{background-image:url(images/h_ensure2.png);background-size:cover;margin:0 auto 0 auto; height: 1.25em;width: 1.25em;}
+ .hw_list_right_name_off{color:#BABABA;margin: -.25em 0 0 .25em;font-size: .75em;}
+ .hw_list_right_file{margin: -.25em 0 0 .75em;font-size: .75em;}
+ .hw_list_right_fileIcon{background-image:url(images/h_ensure1.png);background-size:cover;margin:0 auto 0 auto; height: 1.25em;width: 1.25em;}*/
+
+.hw_file {
+    float: right;
+    right:.5em;
+    background-image: url(images/icon_file.png);
+    background-size: cover;
+    width: 1em;
+    height: 1em;
+    top: .5em;
+}
+.hw_ensure {
+    background-image: url(images/icon_homework_ensure.png)
+}/*确认按钮*/
+.hw_alreadyEnsure {
+    background-image: url(images/icon_homework_alreadyEnsure.png)
+}/*已确认按钮*/
+.hw_ensure:active {
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+/*.hw_click:active{opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50);}*/
+.hw_banhui{
+    background-image: url(images/course/icon_course_banhui.png)
+}/*班会*/
+.hw_chinese {
+    background-image: url(images/course/icon_course_chinese.png)
+}/*语文*/
+.hw_math {
+    background-image: url(images/course/icon_course_math.png)
+}/*数学*/
+.hw_english {
+    background-image: url(images/course/icon_course_english.png)
+}/*英语*/
+.hw_biology {
+    background-image: url(images/course/icon_course_biology.png)
+}/*生物*/
+.hw_chem {
+    background-image: url(images/course/icon_course_chem.png)
+}/*化学*/
+.hw_morality {
+    background-image: url(images/course/icon_course_morality.png)
+}/*品德*/
+.hw_geogra {
+    background-image: url(images/course/icon_course_geogra.png)
+}/*地理*/
+.hw_history {
+    background-image: url(images/course/icon_course_history.png)
+}/*历史*/
+.hw_helthy {
+    background-image: url(images/course/icon_course_helthy.png)
+}/*卫生*/
+.hw_mind {
+    background-image: url(images/course/icon_course_mind.png)
+}/*心理*/
+.hw_music {
+    background-image: url(images/course/icon_course_music.png)
+}/*音乐*/
+.hw_physical {
+    background-image: url(images/course/icon_course_physical.png)
+}/*物理*/
+.hw_sport {
+    background-image: url(images/course/icon_course_sport.png)
+}/*体育*/
+.hw_work {
+    background-image: url(images/course/icon_course_work.png)
+}/*综实*/
+.hw_info {
+    background-image: url(images/course/icon_course_info.png)
+}/*信息*/
+.hw_poem {
+    background-image: url(images/course/icon_course_poem.png)
+}/*诗词*/
+.hw_politics {
+    background-image: url(images/course/icon_course_politics.png)
+}/*政治*/
+.hw_shuhuo {
+    background-image: url(images/course/icon_course_shuhuo.png)
+}/*数活*/
+.hw_team {
+    background-image: url(images/course/icon_course_team.png)
+}/*团队*/
+.hw_write {
+    background-image: url(images/course/icon_course_write.png)
+}/*写字*/
+.hw_science {
+    background-image: url(images/course/icon_course_science.png)
+}/*科学*/
+
+/**
+ *     菜谱
+ */
+.menu_list {
+    font-size: .875em;
+    font-family: 微软雅黑;
+    border-radius: .5em;
+    margin: .5em;
+    padding: .5em;
+    background-color: white;
+}
+.menu_list_bigFont {
+    border-radius: .5em;
+    margin: .5em;
+    padding: 0.1em .5em;
+    background-color: white;
+}
+.menu_list_bigFont_pads {
+    border-radius: .5em;
+    margin: .5em;
+    padding:.5em 0;
+    background-color: white;
+}
+.menu_list_icon{
+    
+}
+.menu_list_time {
+    background-color: #F5F5F5;
+    color: #5f5f5f;
+    padding: .2em;
+}
+.menu_list_footer{
+    padding: .3em;
+}
+.menu_list_content{
+    font-size:1em;
+    word-break:break-all;
+    padding: .5em;
+}
+.menu_list_indent{
+    text-indent: 2em;  
+}
+.menu_list_content_color{
+    color: #848484;
+}
+.menu_list_header_right {
+    top: -.9em;
+    background-size: cover;
+    width: 3.25em;
+    height: 2.3em;
+}
+.menu_list_meal_bd {
+    border-bottom: 1px solid #BABABA;
+}
+.menu_list_marg_top {
+    margin-top: .5em;
+}
+.menu_list_meal_icon {
+    margin: .9em .5em 0 .5em;
+    width: 3em;
+    height: 3em;
+}
+.menu_list_meal_midd_icon {
+    padding:0.1em 0;
+    margin:0 .5em;
+    width: 2.5em;
+    height: 2.5em;
+}
+.menu_list_meal_midd_iconAndpad {
+    padding:0.1em 0;
+    margin:0 .2em;
+    width: 2.5em;
+    height: 2.5em;
+}
+.menu_list_meal_small_icon {
+    padding:0.3em 0;
+    margin:0 .5em;
+    width: 2em;
+    height: 2em;
+}
+.menu_list_title{
+    color:#000000;
+    font-size: 1.125em;
+    word-break: break-all;
+}
+.menu_list_headTime{
+    margin-top:.2em;
+    font-size: .875em;
+    color: #848484;
+}
+.menu_li_img {
+    width: 3em;
+    height: 3em;
+    margin: 0 .1em;
+}
+
+/*
+ .menu_list_meal{min-height: 4em;float: left;width: 100%;}
+ .menu_list_meal_middle{float:left;word-break: break-all;margin: 1em 0;}
+ .menu_list_meal_right{float: right;margin: .9em .5em 0 0;}
+ .menu_list_meal_right img{width: 3em;height: 3em;margin: 0 .25em;}
+ */
+
+.menu_morning {
+    background-image: url(images/icon_menu_morning.png);
+}
+.menu_noon {
+    background-image: url(images/icon_menu_noon.png);
+}
+.menu_night {
+    background-image: url(images/icon_menu_night.png);
+}
+
+
+/*------------评价项图标----------------*/
+/*作业认真   */
+.WorkSeriously-sl{background-image: url(images/performanceItem/WorkSeriously-sl.png);}
+.WorkSeriously-ns{background-image: url(images/performanceItem/WorkSeriously-ns.png);}
+/*发言积极    */
+.SpeakActively-sl{background-image: url(images/performanceItem/SpeakActively-sl.png);}
+.SpeakActively-ns{background-image: url(images/performanceItem/SpeakActively-ns.png);}
+/*认真听讲   */ 
+.ListenCarefully-sl{background-image: url(images/performanceItem/ListenCarefully-sl.png);}
+.ListenCarefully-ns{background-image: url(images/performanceItem/ListenCarefully-ns.png);}
+/*认真值日    */
+.SeriousDuty-sl{background-image: url(images/performanceItem/SeriousDuty-sl.png);}
+.SeriousDuty-ns{background-image: url(images/performanceItem/SeriousDuty-ns.png);}
+/*帮助同学    */
+.HelpStudents-sl{background-image: url(images/performanceItem/HelpStudents-sl.png);}
+.HelpStudents-ns{background-image: url(images/performanceItem/HelpStudents-ns.png);}
+/*礼貌待人    */
+.Politeness-sl{background-image: url(images/performanceItem/Politeness-sl.png);}
+.Politeness-ns{background-image: url(images/performanceItem/Politeness-ns.png);}
+/*作业不认真   */
+.UnWorkSeriously-sl{background-image: url(images/performanceItem/UnWorkSeriously-sl.png);}
+.UnWorkSeriously-ns{background-image: url(images/performanceItem/UnWorkSeriously-ns.png);}
+/*言行不文明   */
+.UnSpeakActively-sl{background-image: url(images/performanceItem/UnSpeakActively-sl.png);}
+.UnSpeakActively-ns{background-image: url(images/performanceItem/UnSpeakActively-ns.png);}
+/*不认真听讲  */ 
+.UnListenCarefully-sl{background-image: url(images/performanceItem/UnListenCarefully-sl.png);}
+.UnListenCarefully-ns{background-image: url(images/performanceItem/UnListenCarefully-ns.png);}
+/*值日不认真  */ 
+.UnSeriousDuty-sl{background-image: url(images/performanceItem/UnSeriousDuty-sl.png);}
+.UnSeriousDuty-ns{background-image: url(images/performanceItem/UnSeriousDuty-ns.png);}
+/*破坏公物    */
+.UnHelpStudents-sl{background-image: url(images/performanceItem/UnHelpStudents-sl.png);}
+.UnHelpStudents-ns{background-image: url(images/performanceItem/UnHelpStudents-ns.png);}
+/*不遵守规则   */
+.UnPoliteness-sl{background-image: url(images/performanceItem/UnPoliteness-sl.png);}
+.UnPoliteness-ns{background-image: url(images/performanceItem/UnPoliteness-ns.png);}
+

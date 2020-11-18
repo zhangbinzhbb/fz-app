@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'DINCondensed-Bold'; //重命名字体名
+  src: url('/src/styles/font/DIN-Condensed-Bold-2.ttf') format('truetype'), //引入字体
+  url('/src/styles/font/DIN-Condensed/DIN-Condensed-Bold-2.eot') format('embedded-opentype'),
+  url('/src/styles/font/DIN-Condensed/DIN-Condensed-Bold-2.woff') format('woff'),
+  url('/src/styles/font/DIN-Condensed/DIN-Condensed-Bold-2.woff2') format('woff2'),
+  url('/src/styles/font/DIN-Condensed/DIN-Condensed-Bold-2.svg') format('svg');
+}
+

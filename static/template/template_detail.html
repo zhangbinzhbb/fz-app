@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../appcan/css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../appcan/css/ui-box.css">
+        <link rel="stylesheet" href="../appcan/css/ui-base.css">
+        <link rel="stylesheet" href="../appcan/css/ui-color.css">
+        <link rel="stylesheet" href="../appcan/css/appcan.icon.css">
+        <link rel="stylesheet" href="../appcan/css/appcan.control.css">
+        <link rel="stylesheet" href="../appcan/css/template.css">
+        <link rel="stylesheet" href="../appcan/css/main.css">
+        <link rel="stylesheet" href="../appcan/css/ehrcv.css">
+        <style type="text/css">
+            .t-blu2 {
+                color: #0670b7;
+            }
+            .uba1 {
+                border: 2px solid;
+            }
+            .c-bla1 {
+                background-color: #484848;
+            }
+            .uwh-tBtn {
+                width: 1.75em;
+                height: 1.75em;
+            }
+            .tab_select {
+                background-color: #FFF;
+                color: #00A1EA !important;
+            }
+            .uinn-a15 {
+                padding: 0.2em 0;
+            }
+            .checkbox input[type=checkbox]:checked:before, .radiobox input[type=radio]:checked:before{
+              color: #B60005!important;
+            }
+            .bc-btn{
+              color: #fff!important;
+              background-color: #B60005!important;
+            }
+            .taskLine{
+              padding: 10px 20px 13px 20px;
+            }
+            /* radiobox */
+            .radiobox input[type=radio]:before {
+              position: absolute;
+              top: 5px;
+              left: 10px;
+              background-color: rgb(212,212,212);
+              background: url("../images/process_no.png");
+              background-size:100% 100% ;
+              color: #fff;
+              width: 16px;
+              height: 16px;
+              display: inline-block;
+              visibility: visible;
+              padding-left: 0px;
+              text-align: center;
+              content: ''!important;
+              border-radius: 50%;
+            }
+            .radiobox input[type=radio]:checked:before {
+              position: absolute;
+              top: 5px;
+              left: 10px;
+              background-color: #B60005;
+              background: url("../images/process_yes.png");
+              background-size:100% 100% ;
+              color: #fff;
+              width: 16px;
+              height: 16px;
+              display: inline-block;
+              visibility: visible;
+              padding-left: 0px;
+              text-align: center;
+              content: ' '!important;
+              border-radius: 50%;
+            }
+          .center{
+            padding-right: 0;
+          }
+          .center label{
+             min-width: 103px;
+          }
+            .content{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 0 2px 29px!important;
+            }
+            .content p:nth-of-type(1){
+              max-width: 80%;
+            }
+            .content_Result{
+              padding: 0px 0px 16px 29px;
+              font-size: 12px;
+              font-weight: 500;
+              color: rgba(153, 153, 152, 1);
+              line-height: 22px;
+              word-wrap: break-word;
+
+            }
+            .clearfix:after, div:after, h3:after, ul:after{
+              content:none
+            }
+
+            .ub-file .center{
+              display: block!important;
+              padding-top:20px;
+            }
+            .ub-file .center a{
+              display: block;
+              padding-left: 20px;
+              font-size:15px;
+              font-family:PingFangSC-Medium,PingFang SC;
+              font-weight:500;
+              color:rgba(76,76,76,1);
+              margin-bottom: -7px;
+              /*line-height:40px;*/
+            }
+        </style>
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <div id="headerTop" class="uh bc-text-head ub bc-head" style="height: 0px; position: fixed; top: 0px; z-index: 10"></div>
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head" style="position: fixed; z-index: 11; top: 0px;">
+            </div>
+            <!--header结束--><!--content开始-->
+            <!--<div id="content" class="ub-f1 tx-l"></div>-->
+            <!--content结束-->
+            <div id="listview"  class="" style="margin-top: 47px;"></div>
+            <!--<div class="" id="backHome">
+              <div class="" style="margin:0.25em 0 0 0.7em; width:1.4em;height:1.4em;background-size:contain;background-image: url('../css/images/top.png');"></div>
+              <div style="margin:0 0 0 0.9em;font-size: 0.75em;color: #5B5B5B;font:微软雅黑;">顶部</div>
+            </div>-->
+            <div id="footer" class="bc-border ub sc-bg">
+            </div>
+        </div>
+        <script src="../appcan/js/appcan.js"></script>
+        <script src="../appcan/js/appcan.control.js"></script>
+        <script src="../appcan/js/requesturl.js"></script>
+        <script src="../appcan/js/jxhdControl.js"></script>
+        <script src="../appcan/js/Base64.js"></script>
+        <script src="../appcan/js/template-native.js"></script>
+        <script src="../appcan/js/tempDB.js"></script>
+        <script src="../appcan/js/downFiles.js"></script>
+        <script src="../appcan/js/template_common.js"></script>
+    </body>
+    <script>
+        var templateParams = appcan.locStorage.val("templateParams");
+        var template_Param;
+        var template_cmd ;
+        var fromPageName = appcan.locStorage.val('fromPageName');
+        var fromPageType = '0';
+        var thisPageName = appcan.locStorage.val('thisPageName');
+        var templateHeader,templateContent,templateFooter,uri;
+        var openedCmd = [];
+        var isOpened = false;
+        $(document).ready(function () {
+            localstorageVal(false);
+            template_cmd = appcan.locStorage.val("template_cmd");
+            if (appcan.locStorage.val('template_Param') != null && appcan.locStorage.val('template_Param') != 'null' && appcan.locStorage.val('template_Param') != undefined) {
+                template_Param = JSON.parse(appcan.locStorage.val('template_Param'));
+                appcan.locStorage.remove('template_Param');
+            }else{
+                template_Param = {};
+            }
+            //从数据库中查询header，content,footer的模板并赋值到header,content,footer参数中。
+            getDataByCmd(template_cmd,function(data){
+                if(data==1){
+                    //cmd不正确
+                }else if(data==2){
+                    //没有结果
+                }else{
+                    getApplications(data);
+                }
+            });
+            setHeader(true);
+            appcan.button("#nav-left", "btn-act", back);
+        });
+        function back(){
+          var detailCloseType = appcan.locStorage.val('detailCloseType')
+          appcan.locStorage.val('detailCloseType', "");
+          if (detailCloseType != null && detailCloseType != '') {
+            window.history.back(-1)
+          }else {
+            window.close();
+          }
+
+        }
+
+        //获取url路径的拼接参数,并存到localStorage中,使用时直接调localstorageVal方法
+        //调用的时候url可传可不传
+        function localstorageVal(url) {
+          //用 decodeURI 无法转换后台url转码，换成unescape
+          url = url || unescape(location.search)
+          // https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu
+          //一般url的参数都是在？后面开始是参数
+          //因为 templateParams 中有？和&符号，所有不用用split处理，只能用substring,需要保证传过来的参数顺序不变
+          var paramsStr = url;
+          if (paramsStr === undefined) {
+            //表示传递过来的url中不包含参数
+            return false
+          } else {
+            var paramslen = paramsStr.indexOf("cmd=");
+            if(paramslen >-1){
+                var cmdlen = paramsStr.indexOf("&cmd=");
+                var personIdlen = paramsStr.indexOf("&personId=");
+
+                var cmdStr = paramsStr.substring(cmdlen+6,personIdlen)
+                var paramsstr = paramsStr.substring(personIdlen)
+
+                appcan.locStorage.val('templateParams', paramsstr)
+                appcan.locStorage.val('template_cmd', cmdStr)
+                var thisPageName = appcan.locStorage.val('thisPageName') || 'myTaskList'
+                appcan.locStorage.val('fromPageName', thisPageName)
+                // 必须有，调用父页面js需使用此页面名称
+                var name = cmdStr + '_detail'
+                appcan.locStorage.val('thisPageName', name)
+            }
+          }
+        }
+
+        function reload(){
+            location.reload(true);
+        }
+        function removeUHIOS7(){
+            var ios_version = uexWidgetOne.platformVersion;
+            ios_version = ios_version.substring(0,ios_version.indexOf("."));
+            if(uexWidgetOne.platformName == "iOS" && ios_version >=11){
+                $("body").removeClass("uh_ios7");
+            }
+        }
+        function getApplications(data){
+            var commonParams=appcan.locStorage.val("commonParams");
+            templateHeader = data["template_Header"];
+            templateContent = data["template_Content"];
+            templateFooter = data["template_Footer"];
+            uri = centerIP + data["url"] + '?cmd='+ template_cmd +templateParams;
+            if(commonParams!=null && commonParams!='null'){
+                uri=uri+commonParams;
+            }
+            var url = encodeURI(uri);
+            appcan.locStorage.val("getDataUrl",url);
+            var json = template_Param;
+            requestJson({
+                uri:url,
+                type:'POST',
+                isToast:true,
+                postData:json,
+                callback:function(status,data){
+                    if(status!=0){
+                        return;
+                    }
+                    initPage(data);
+                }
+            });
+        }
+        function initPage(data){
+          // debugger
+            if(templateHeader!="\u0000"&&templateHeader!=""&&templateHeader!=null){
+                renderTemplate(templateHeader,data,'header',1);
+            }
+            if(templateFooter!="\u0000"&&templateFooter!=""&&templateFooter!=null){
+                renderTemplate(templateFooter,data,'footer',1);
+            }
+            if(templateContent!="\u0000"&&templateContent!=""&&templateContent!=null){
+                appcan.locStorage.val("templateContent",templateContent);
+                appcan.locStorage.val("dataContentData",data);
+                // loadContent();
+                renderTemplate(templateContent,data,'listview',1);
+
+            }else{
+                appcan.window.openToast('自动获取模板失败，请主动获取模板', 2000, '5', '0');
+            }
+        }
+
+
+        function articleOperate(obj){
+            var barType = $(obj).attr('barType');
+            var barFlag = $(obj).attr('barFlag');
+            var cmd = $(obj).attr('cmd');
+            var params = $(obj).attr('params');
+            if(barType == 'praise'){
+                if(barFlag==1){
+                    appcan.window.openToast('已点赞，请勿重复点赞', 2000, '5', '0');
+                }else{
+                    doPraise(cmd,params);
+                }
+            }else if(barType == 'discuss'){
+
+                appcan.locStorage.val("templateCmd",cmd+'_input');
+                appcan.locStorage.val("discuss_cmd",cmd);
+                appcan.locStorage.val("discuss_params",params);
+
+                openPopoverPage(cmd,'template_pop.html');
+                // appcan.window.open(cmd,'template_pop.html',0,4);
+                // $('#bottomBar').addClass('uhide');
+                // $('#discussBar').removeClass('uhide');
+                // var titHeight = $('#header').offset().height;
+                // appcan.frame.resize("content", 0, titHeight);
+            }else if(barType == 'collect'){
+                doCollect(cmd,params);
+            }
+        }
+        function openPopoverPage(name,path){
+            appcan.window.openPopover({
+                name : name,
+                dataType : 0,
+                url : path,
+                top : 0,
+                left : 0,
+                type : 0,
+                bottomMargin : 0
+            });
+        }
+        function closePopoverPage(){
+            var name = appcan.locStorage.val("discuss_cmd");
+            appcan.window.closePopover(name);
+        }
+        function discussCancle(obj){
+            $('#discussBar').addClass('uhide');
+            $('#bottomBar').removeClass('uhide');
+            var titHeight = $('#header').offset().height;
+            appcan.frame.resize("content", 0, titHeight);
+        }
+        function discussEnsure(){
+            // if(checkMaxLength()&&checkRequire()){
+                // var cmd = $(obj).attr('cmd');
+                // var params = $(obj).attr('params');
+                var cmd = appcan.locStorage.val("discuss_cmd");
+                var params = appcan.locStorage.val("discuss_params");
+                var json = JSON.parse(appcan.locStorage.val("discuss_json"));
+                getDataByCmd(cmd,function(data){
+                    if(data==1){
+                        //cmd不正确
+                        appcan.window.openToast('获取模板失败，请稍后重试', 2000, '5', '0');
+                    }else if(data==2){
+                        //没有结果
+                        appcan.window.openToast('暂时没有模板数据，请手动获取模板数据', 2000, '5', '0');
+                    }else{
+                        submitDiscuss(data,cmd,params,json);
+                    }
+                });
+            // }
+        }
+        function submitDiscuss(data,cmd,params,json){
+            uri1 = centerIP + data["url"] + '?cmd='+ cmd + appcan.locStorage.val("commonParams")+params;
+            // alert(uri1)
+            var url = encodeURI(uri1);
+            appcan.window.openToast('正在发送...',0,5,1);
+            var fileUrls = [];
+            var json = json;
+            sendData(url, json, fileUrls, function(id, type, status, result, requestCode, response, progress) {
+                if (type == '0') {
+                    if (status == 1) {
+
+                        var data = JSON.parse(result);
+                        if(data.statue==0){
+                            appcan.window.openToast(data.msg, 2000, '5', '0');
+                            // $('#discussBar').addClass('uhide');
+                            // $('#bottomBar').removeClass('uhide');
+                            //uexWindow.reload();
+                            appcan.frame.evaluateScript("","content","initInfo()");
+
+                        }else if(data.statue==9){
+                            appcan.window.openToast('登陆失效，请重新登陆', 2000, '5', '0');
+                            return;
+                        }else{
+                            appcan.window.openToast(data.msg, 2000, '5', '0');
+                            return;
+                        }
+                    } else if (status == -1 && requestCode == -1) {
+                        uexWindow.toast(0, 5, '网络请求超时，请稍后重试', 2000);
+                    } else {
+                        uexWindow.toast(0, 5, '出错啦，请稍后重试或联系管理员', 2000);
+                    }
+                } else if (type == '1') {
+                    // uexWindow.toast(1, 5, '正在上传文件：' + progress + '%', '');
+                    // if (progress == 100) {
+                        // uexWindow.toast(1, 5, '正在发送...', '');
+                    // }
+                }
+            });
+        }
+        function doPraise(cmd,params){
+            getDataByCmd(cmd,function(data){
+                if(data==1){
+                    //cmd不正确
+                    appcan.window.openToast('获取模板失败，请稍后重试', 2000, '5', '0');
+                }else if(data==2){
+                    //没有结果
+                    appcan.window.openToast('暂时没有模板数据，请手动获取模板数据', 2000, '5', '0');
+                }else{
+                    submitPraise(data,cmd,params);
+                }
+            });
+        }
+        function doCollect(cmd,params){
+            getDataByCmd(cmd,function(data){
+                if(data==1){
+                    //cmd不正确
+                    appcan.window.openToast('获取模板失败，请稍后重试', 2000, '5', '0');
+                }else if(data==2){
+                    //没有结果
+                    appcan.window.openToast('暂时没有模板数据，请手动获取模板数据', 2000, '5', '0');
+                }else{
+                    submitCollect(data,cmd,params);
+                }
+            });
+        }
+        function submitCollect(data,cmd,params){
+            uri3 = centerIP + data["url"] + '?cmd='+ cmd + appcan.locStorage.val("commonParams")+params;
+            var json = {};
+            var url = encodeURI(uri3);
+            var fileUrls = [];
+            sendData(url, json, fileUrls, function(id, type, status, result, requestCode, response, progress) {
+                if (type == '0') {
+                    if (status == 1) {
+                        var data = JSON.parse(result);
+                        if(data.statue==0){
+                            var isCollect = data.isCollect;
+                            if(isCollect==1){
+                                $('.bottomBarRightIcon[barType=collect]').addClass('agreeColor');
+                                $('.bottomBarRightIcon[barType=collect]').html('<div class="fa fa-smallx fa-star"></div>');
+                                // $('.oneBar[barType=collect] div').removeClass('fa-star-o');
+                                // $('.oneBar[barType=collect] div').addClass('fa-star');
+                                appcan.window.openToast('收藏成功', 2000, '5', '0');
+                            }else{
+                                $('.bottomBarRightIcon[barType=collect]').removeClass('agreeColor');
+                                $('.bottomBarRightIcon[barType=collect]').html('<div class="fa fa-smallx fa-star-o"></div>');
+                                // $('.oneBar[barType=collect] div').addClass('fa-star-o');
+                                // $('.oneBar[barType=collect] div').removeClass('fa-star');
+                                appcan.window.openToast('已取消收藏', 2000, '5', '0');
+                            }
+
+                        }else if(data.statue==9){
+                            appcan.window.openToast('登陆失效，请重新登陆', 2000, '5', '0');
+                            return;
+                        }else{
+                            appcan.window.openToast(data.msg, 2000, '5', '0');
+                            return;
+                        }
+                    } else if (status == -1 && requestCode == -1) {
+                        uexWindow.toast(0, 5, '网络请求超时，请稍后重试', 2000);
+                    } else {
+                        uexWindow.toast(0, 5, '出错啦，请稍后重试或联系管理员', 2000);
+                    }
+                } else if (type == '1') {
+                }
+            });
+
+            // requestJson({
+                // uri:uri3,
+                // type:'POST',
+                // isShowTips:false,
+                // postData:json,
+                // callback:function(status,data){
+                    // if(status!=0){
+                        // return;
+                    // }
+                    // var isCollect = data.isCollect;
+                    // if(isCollect==1){
+                        // $('.oneBar[barType=collect]').addClass('agreeColor');
+                        // $('.oneBar[barType=collect] div').removeClass('fa-star-o');
+                        // $('.oneBar[barType=collect] div').addClass('fa-star');
+                    // }else{
+                        // $('.oneBar[barType=collect]').removeClass('agreeColor');
+                        // $('.oneBar[barType=collect] div').addClass('fa-star-o');
+                        // $('.oneBar[barType=collect] div').removeClass('fa-star');
+                    // }
+                // }
+            // });
+        }
+        function submitPraise(data,cmd,params){
+            uri2 = centerIP + data["url"] + '?cmd='+ cmd + appcan.locStorage.val("commonParams")+params;
+            // var url = encodeURI(uri2);
+            var json = {};
+            var url = encodeURI(uri2);
+            var fileUrls = [];
+            sendData(url, json, fileUrls, function(id, type, status, result, requestCode, response, progress) {
+                if (type == '0') {
+                    if (status == 1) {
+                        var data = JSON.parse(result);
+                        if(data.statue==0){
+                            $('.bottomBarRightIcon[barType=praise]').addClass('agreeColor');
+                            $('.bottomBarRightIcon[barType=praise] div').removeClass('fa-thumbs-o-up');
+                            $('.bottomBarRightIcon[barType=praise] div').addClass('fa-thumbs-up');
+                            // uexWindow.reload();
+                            appcan.frame.evaluateScript("","content","initInfo()");
+                            appcan.window.openToast('点赞成功', 2000, '5', '0');
+                        }else if(data.statue==9){
+                            appcan.window.openToast('登陆失效，请重新登陆', 2000, '5', '0');
+                            return;
+                        }else{
+                            appcan.window.openToast(data.msg, 2000, '5', '0');
+                            return;
+                        }
+                    } else if (status == -1 && requestCode == -1) {
+                        uexWindow.toast(0, 5, '网络请求超时，请稍后重试', 2000);
+                    } else {
+                        uexWindow.toast(0, 5, '出错啦，请稍后重试或联系管理员', 2000);
+                    }
+                } else if (type == '1') {
+                }
+            });
+            // requestJson({
+                // uri:uri2,
+                // type:'POST',
+                // isShowTips:false,
+                // postData:json,
+                // callback:function(status,data){
+                    // if(status!=0){
+                        // return;
+                    // }
+                    // $('.oneBar[barType=praise]').addClass('agreeColor');
+                    // $('.oneBar[barType=praise] div').removeClass('fa-thumbs-o-up');
+                    // $('.oneBar[barType=praise] div').addClass('fa-thumbs-up');
+                    // uexWindow.reload();
+                // }
+            // });
+        }
+        function sendData(serverUrl, postData, fileUrls, callback) {
+            var opId = Math.floor(Math.random() * (1000 + 1));
+            uexXmlHttpMgr.onData = function(opId, status, result, requestCode, response) {
+                uexXmlHttpMgr.close(opId);
+                callback(opId, "0", status, result, requestCode, response, "");
+                //alert("OPID:"+id+"\\nSTATE:"+status+"\\nRESULT:"+result+"\\nREQUESTCODE:"+requestCode+"\\nRESPONSE:"+response);
+            }
+            uexXmlHttpMgr.onPostProgress = function(opId, progress) {
+                //uexWindow.toast(1, 5, 'progress:'+progress, '');
+                callback(opId, "1", "", "", "", "", progress);
+            }
+            uexXmlHttpMgr.open(opId, "post", serverUrl, "300000");
+            //循环遍历要发送的数据。
+            var headJson = '{"token":"'+appcan.locStorage.val("token")+'"}';
+            uexXmlHttpMgr.setHeaders(opId, headJson);
+            for (var key in postData) {
+                //alert(key+'='+postData[key])
+                uexXmlHttpMgr.setPostData(opId, "0", key, postData[key]);
+            }
+            for (var i = 0; i < fileUrls.length; i++) {
+                var fileName = 'file' + i;
+                //alert('fileName:'+fileName+'----fileurl:'+fileUrls[i])
+                uexXmlHttpMgr.setPostData(opId, "1", fileName, fileUrls[i]);
+            }
+            uexXmlHttpMgr.send(opId);
+        }
+
+    </script>
+
+</html>
